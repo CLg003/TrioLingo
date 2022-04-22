@@ -1,4 +1,5 @@
-// to do: add icons links 
+// numbers attribute: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+//animals and colours attribute: https://icons8.com/
 export const words_data = {
     animals: {
         dog: {
@@ -9,16 +10,16 @@ export const words_data = {
             translation: "gato",
             img: ""
         },
-        racoon: {
-            translation: "mapache",
+        fish: { /// racoon not available
+            translation: "",
             img: ""
         },
         duck: {
             translation: "pato",
             img: ""
         },
-        eagle: {
-            translation: "agila",
+        penguin: { // eagle not available
+            translation: "",
             img: ""
         },
         dinosaur: {
