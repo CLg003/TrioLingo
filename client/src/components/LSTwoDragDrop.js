@@ -9,15 +9,15 @@ const DragDrop = ({words}) => {
     // NEED AN ARRAY OF THE COLOURS FOR DnD
     const colourList = [words.black, words.blue, words.brown, words.green, words.orange, words.purple, words.red, words.white, words.yellow];
     // ADDING COLOUR PROPERTY
-    colourList[0]['colour'] = "black";
-    colourList[1]['colour'] = "blue";
-    colourList[2]['colour'] = "brown";
-    colourList[3]['colour'] = "green";
-    colourList[4]['colour'] = "orange";
-    colourList[5]['colour'] = "purple";
-    colourList[6]['colour'] = "red";
-    colourList[7]['colour'] = "white";
-    colourList[8]['colour'] = "yellow";
+    colourList[0]['english'] = "black";
+    colourList[1]['english'] = "blue";
+    colourList[2]['english'] = "brown";
+    colourList[3]['english'] = "green";
+    colourList[4]['english'] = "orange";
+    colourList[5]['english'] = "purple";
+    colourList[6]['english'] = "red";
+    colourList[7]['english'] = "white";
+    colourList[8]['english'] = "yellow";
     // ADDING ID PROPERTY (WON'T BE NEEDED ONCE DB UP AND RUNNING)
     colourList[0]['id'] = 0;
     colourList[1]['id'] = 1;
@@ -29,17 +29,17 @@ const DragDrop = ({words}) => {
     colourList[7]['id'] = 7;
     colourList[8]['id'] = 8;
     // ADDING IMG PROPERTY (WON'T BE NEEDED ONCE IMAGES UPLOADED)
-    colourList[0]['img'] = 'https://flyclipart.com/thumb2/black-square-png-free-download-468632.png';
-    colourList[1]['img'] = 'https://flyclipart.com/thumb2/blue-square-image-564985.png';
-    colourList[2]['img'] = 'https://img.favpng.com/18/12/18/brown-rectangle-beige-square-png-favpng-kXDVeNw5TgcZjG1TbN5SC6Z6v.jpg';
-    colourList[3]['img'] = 'https://flyclipart.com/thumb2/download-green-square-rounded-corners-clipart-255275.png';
-    colourList[5]['img'] = 'https://flyclipart.com/thumb2/square-clip-art-186912.png';
-    colourList[4]['img'] = 'https://www.pngkey.com/png/full/107-1076389_purple-square-free-clipart-image-lilac.png';
-    colourList[6]['img'] = 'https://flyclipart.com/thumb2/square-transparent-png-pictures-230837.png';
-    colourList[7]['img'] = 'https://flyclipart.com/thumb2/square-468638.png';
-    colourList[8]['img'] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlaMYF00T-1pBcGvqsYW2G2IRmJBTufWXyOg&usqp=CAU';
+    colourList[0]['img'] = '../images/colours/black.png';
+    colourList[1]['img'] = '../images/colours/blue.png';
+    colourList[2]['img'] = '../images/colours/brown.png';
+    colourList[3]['img'] = '../images/colours/green.png';
+    colourList[5]['img'] = '../images/colours/orange.png';
+    colourList[4]['img'] = '../images/colours/purple.png';
+    colourList[6]['img'] = '../images/colours/red.png';
+    colourList[7]['img'] = '../images/colours/white.png';
+    colourList[8]['img'] = '../images/colours/yellow.png';
 
-    // console.log(colourList[0].img);
+    // console.log(colourList);
 
     
     // DESTINATION FOR DRAGGED ITEMS
@@ -67,12 +67,12 @@ const DragDrop = ({words}) => {
         <>
         <div className="dnd-colours">
             {colourList.map((colour) => {
-                return <Colour url={colour.img} id={colour.id} key={colour.id} />
+                return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
             })}
         </div>
         <div className="dnd-board" ref={drop}>
             {board.map((colour) => {
-                return <Colour url={colour.img} id={colour.id} key={colour.id} />
+                return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
             })}
         </div>
         </>
