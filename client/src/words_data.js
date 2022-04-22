@@ -9,16 +9,16 @@ export const words_data = {
             translation: "gato",
             img: ""
         },
-        racoon: {
-            translation: "mapache",
+        fish: {
+            translation: "pescado",
             img: ""
         },
         duck: {
             translation: "pato",
             img: ""
         },
-        eagle: {
-            translation: "agila",
+        penguin: {
+            translation: "pinguino",
             img: ""
         },
         dinosaur: {
