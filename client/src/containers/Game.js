@@ -27,6 +27,11 @@ function Game() {
     const [choiceOne , setChoiceOne] = useState(null)
     const [choiceTwo , setChoiceTwo] = useState(null)
 
+//we want to disable the cards so we do not confuse the users by how many times a card can be
+// clickable
+
+    const [disabled, setDisabled] = useState(false)
+
 
     const shuffleCards = () => {
         const shuffledCards = [...cardImages]
@@ -52,6 +57,7 @@ function Game() {
     //compare 2 selected cards
     useEffect(() => {
         if (choiceOne && choiceTwo) {
+            setDisabled(true)
 
             if (choiceOne.name === choiceTwo.name) {
                 // console.log("Those cards match")
@@ -80,6 +86,7 @@ function Game() {
         setChoiceOne(null)
         setChoiceTwo(null)
         setTurns(prevTurns => prevTurns + 1)
+        setDisabled(false)
     }
 
     return (
@@ -94,7 +101,8 @@ function Game() {
                     card={card} 
                     handleChoice={handleChoice} 
                     flipped={card === choiceOne ||
-                    card === choiceOne || card.matched} />
+                    card === choiceOne || card.matched}
+                    disabled={disabled} />
                 ))}
 
             </div>
