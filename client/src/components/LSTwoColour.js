@@ -1,6 +1,7 @@
 import { useDrag } from 'react-dnd';
 
-const Colour = ({id, img}) => {
+function Colour({id, url}) {
+    // MONITORING THE ITEM BEING DRAGGED
     const [{isDragging}, drag] = useDrag(() => ({
         type: "colour",
         item: {id: id},
@@ -9,12 +10,15 @@ const Colour = ({id, img}) => {
         }),
     }));
     return (
-        <img
-            ref={drag}
-            src={img}
-            width="150px"
-            style={{ border: isDragging ? "5px solid purple" : "0px"}}
-        />
+        <>
+            <img
+                ref={drag}
+                src={url}
+                alt="Coloured square"
+                width="150px"
+                style={{ border: isDragging ? "5px solid purple" : "0px"}}
+            />
+        </>
     );
 }
 

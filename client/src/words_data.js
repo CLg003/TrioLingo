@@ -1,121 +1,121 @@
-// MIGHT NEED TO RETURN [] BELOW TO {} BEFORE MERGING (AND EXTRA {} )
+
 export const words_data = {
-    animals: [
-        {dog: {
+    animals: {
+        dog: {
             translation: "perro",
             img: ""
-        }},
-        {cat: {
+        },
+        cat: {
             translation: "gato",
             img: ""
-        }},
-        {racoon: {
+        },
+        racoon: {
             translation: "mapache",
             img: ""
-        }},
-        {duck: {
+        },
+        duck: {
             translation: "pato",
             img: ""
-        }},
-        {eagle: {
+        },
+        eagle: {
             translation: "agila",
             img: ""
-        }},
-        {dinosaur: {
+        },
+        dinosaur: {
             translation: "dinosaurio",
             img: ""
-        }},
-        {pig: {
+        },
+        pig: {
             translation: "cerdo",
             img: ""
-        }},
-        {frog: {
+        },
+        frog: {
             translation: "rana",
             img: ""
-        }}
-    ],
-    colours: [
-        {red: {
+        }
+    },
+    colours: {
+        red: {
             translation: "rojo",
             img: ""
-        }},
-        {green: {
+        },
+        green: {
             translation: "verde",
             img: ""
-        }},
-        {yellow: {
+        },
+        yellow: {
             translation: "amarillo",
             img: ""
-        }},
-        {orange: {
+        },
+        orange: {
             translation: "naranja",
             img: ""
-        }},
-        {brown: {
+        },
+        brown: {
             translation: "marron",
             img: ""
-        }},
-        {blue: {
+        },
+        blue: {
             translation: "azul",
             img: ""
-        }},
-        {white: {
+        },
+        white: {
             translation: "blanco",
             img: ""
-        }},
-        {black: {
+        },
+        black: {
             translation: "negro",
             img: ""
-        }},
-        {purple: {
+        },
+        purple: {
             translation: "morado",
             img: ""
-        }},
-    ],
-    numbers: [
-        {zero: {
+        },
+    },
+    numbers: {
+        zero: {
             translation: "cero",
             img: ""
-        }},
-        {one: {
+        },
+        one: {
             translation: "uno",
             img: ""
-        }},
-        {two: {
+        },
+        two: {
             translation: "dos",
             img: ""
-        }},
-        {three: {
+        },
+        three: {
             translation: "tres",
             img: ""
-        }},
-        {four: {
+        },
+        four: {
             translation: "cuatro",
             img: ""
-        }},
-        {five: {
+        },
+        five: {
             translation: "cinco",
             img: ""
-        }},
-        {six: {
+        },
+        six: {
             translation: "seis",
             img: ""
-        }},
-        {seven: {
+        },
+        seven: {
             translation: "siete",
             img: ""
-        }},
-        {eight: {
+        },
+        eight: {
             translation: "ocho",
             img: ""
-        }},
-        {nine: {
+        },
+        nine: {
             translation: "nueve",
             img: ""
-        }},
-        {ten: {
+        },
+        ten: {
             translation: "diez",
             img: ""
-        }}
-    ],
+        }
+    },
 }
