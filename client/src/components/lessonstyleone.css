@@ -1,5 +1,11 @@
 
+/* animation */
 
+@keyframes grow {
+    0% {font-size: 1.17em;}
+    50% {font-size: 2.4em;}
+    100% {font-size: 1.17em;}
+}
 
 .numbers {
     display: flex;
@@ -7,10 +13,28 @@
 
 .number-item {
     margin: 15px;
+    
 }
 
+.zero {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 5s;
+}
 
+.one {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
 
+.two {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 5s;
+    animation-delay: 10s;
+}
 
 /* remove list styling */
 
