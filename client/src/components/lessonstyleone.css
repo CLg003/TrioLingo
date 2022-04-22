@@ -3,83 +3,75 @@
 
 @keyframes grow {
     0% {font-size: 1.17em;}
-    50% {font-size: 2.4em;}
+    50% {font-size: 2em;}
     100% {font-size: 1.17em;}
 }
 
 .numbers {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .number-item {
-    margin: 15px;
+
+
     
 }
 
 .zero {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
 }
 
 .one {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 3s;
 }
 
 .two {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 6s;
 }
 
 .three {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 9s;
 }
 
 .four {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 12s;
 }
 
 .five {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 15s;
 }
 
 .six {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 18s;
 }
 
 .seven {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 21s;
 }
 
 .eight {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 24s;
 }
 
 .nine {
-    margin: 15px;
     animation-name: grow;
     animation-duration: 3s;
     animation-delay: 27s;
@@ -94,4 +86,16 @@ ul {
 
 li {
     list-style: none;
+    /* border: solid; */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+img {
+    width: 50px;
 }
