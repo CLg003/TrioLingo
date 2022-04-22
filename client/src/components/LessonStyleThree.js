@@ -1,11 +1,20 @@
+import React, {useState} from "react";
 
+const LessonStyleThree = ({words}) => {
 
-const LessonStyleThree = () => {
+    const [showHoverContent, setShowHoverContent] = useState(false);
 
     return (
         <>
         <h2>Animals Lesson</h2>
-        <p>The dog chases a ball</p>
+        <p onMouseEnter={() => setShowHoverContent(true)}
+            onMouseLeave={() => setShowHoverContent(false)}
+        >The dog chases a ball</p>
+        {showHoverContent && (
+        <div>
+          {words.dog.translation}
+        </div>
+      )}
         <p>The cat is asleep</p>
         <p>The raccoon is eating fish</p>
         <p>The duck swims on the pond</p>
