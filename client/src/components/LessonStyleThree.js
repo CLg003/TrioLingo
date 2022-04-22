@@ -15,9 +15,14 @@ const LessonStyleThree = ({words}) => {
     return (
         <>
         <h2>Animals Lesson</h2>
-        <p onMouseEnter={() => setShowDogContent(true)}
+        {/* <p onMouseEnter={() => setShowDogContent(true)}
             onMouseLeave={() => setShowDogContent(false)}
-        >The dog chases a ball</p>
+        >The dog chases a ball</p> */}
+        <p>The <button type="button" 
+                        onMouseEnter={() => setShowDogContent(true)}
+                        onMouseLeave={() => setShowDogContent(false)}>
+                        dog    
+                </button> chases a ball</p>
         {showDogContent && (
         <div>
           {words.dog.translation}
