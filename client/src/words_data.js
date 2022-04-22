@@ -1,4 +1,4 @@
-
+// to do: add icons links 
 export const words_data = {
     animals: {
         dog: {
