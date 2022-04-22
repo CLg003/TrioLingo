@@ -3,28 +3,20 @@ import SingleCard from "../components/SingleCard";
 
 
 const cardImages = [
-    {"src": "/img/manzanaa.png" , matched: false},
-    {"src": "/img/bus.png" , matched: false},
-    {"src": "/img/pez.png" , matched: false},
-    {"src": "/img/rojo.png" , matched: false},
-    {"src": "/img/tres.png" , matched: false},
-    {"src": "/img/perro.png" , matched: false},
-    {"src": "/img/manzana.png" , matched: false},
-    {"src": "/img/autobusp.png" , matched: false},
-    {"src": "/img/pezp.png" , matched: false},
-    {"src": "/img/rojop.png" , matched: false},
-    {"src": "/img/tresp.png" , matched: false},
-    {"src": "/img/perrop.png" , matched: false}
+    {"src": "/img/manzanaa.png" , matched: false , name: "manzana"},
+    {"src": "/img/bus.png" , matched: false , name: "bus"},
+    {"src": "/img/pez.png" , matched: false , name: "pez"},
+    {"src": "/img/rojo.png" , matched: false , name: "rojo"},
+    {"src": "/img/tres.png" , matched: false , name: "tres"},
+    {"src": "/img/perro.png" , matched: false , name: "perro"},
+    {"src": "/img/manzana.png" , matched: false , name: "manzana"},
+    {"src": "/img/autobusp.png" , matched: false , name: "bus"},
+    {"src": "/img/pezp.png" , matched: false, name: "pez"},
+    {"src": "/img/rojop.png" , matched: false , name: "rojo"},
+    {"src": "/img/tresp.png" , matched: false, name: "tres"},
+    {"src": "/img/perrop.png" , matched: false, name: "perro"}
 ]
 
-// const imagesWords = [
-//     {"src": "/img/manzanap.png"},
-//     {"src": "/img/autobusp.png"},
-//     {"src": "/img/pezp.png"},
-//     {"src": "/img/rojop.png"},
-//     {"src": "/img/tresp.png"},
-//     {"src": "/img/perrop.png"}
-// ]
 
 function Game() {
 
@@ -37,7 +29,7 @@ function Game() {
 
 
     const shuffleCards = () => {
-        const shuffledCards = [...cardImages , ...cardImages]
+        const shuffledCards = [...cardImages]
         // the sort method will fire a function for each pair of item of
         // item on the array and inside function if we return a number less 
         // than 0 the odd of those 2 items will stay the same. if we return 
@@ -61,11 +53,11 @@ function Game() {
     useEffect(() => {
         if (choiceOne && choiceTwo) {
 
-            if (choiceOne.src === choiceTwo.src) {
+            if (choiceOne.name === choiceTwo.name) {
                 // console.log("Those cards match")
                 setCards(prevCards => {
                     return prevCards.map(card => {
-                        if (card.src === choiceOne.src) {
+                        if (card.name === choiceOne.name) {
                             return {...card, matched :true}
                         }else {
                             return card
