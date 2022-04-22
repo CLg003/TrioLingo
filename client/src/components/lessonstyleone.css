@@ -19,22 +19,72 @@
 .zero {
     margin: 15px;
     animation-name: grow;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 .one {
     margin: 15px;
     animation-name: grow;
-    animation-duration: 5s;
-    animation-delay: 5s;
+    animation-duration: 3s;
+    animation-delay: 3s;
 }
 
 .two {
     margin: 15px;
     animation-name: grow;
-    animation-duration: 5s;
-    animation-delay: 10s;
+    animation-duration: 3s;
+    animation-delay: 6s;
 }
+
+.three {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 9s;
+}
+
+.four {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 12s;
+}
+
+.five {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 15s;
+}
+
+.six {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 18s;
+}
+
+.seven {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 21s;
+}
+
+.eight {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 24s;
+}
+
+.nine {
+    margin: 15px;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 27s;
+}
+
 
 /* remove list styling */
 
