@@ -1,0 +1,23 @@
+
+
+
+.numbers {
+    display: flex;
+}
+
+.number-item {
+    margin: 15px;
+}
+
+
+
+
+/* remove list styling */
+
+ul {
+    padding:0;
+}
+
+li {
+    list-style: none;
+}
