@@ -82,7 +82,7 @@ const LessonStyleOne = ({words}) => {
 
         </ul>
         <div>
-            <button onClick={toggleState}>
+            <button onClick={toggleState}  disabled={translate}>
                 Translate
             </button>
         </div>
