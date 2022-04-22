@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Colour from './LSTwoColour';
+import DropZone from './LSTwoDropZone';
 import '../LSTwoDragDrop.css';
 
 
@@ -41,17 +42,22 @@ const DragDrop = ({words}) => {
 
     // console.log(colourList);
 
+    const dropZones = ["red", "orange", "yellow", "green", "blue", "purple", "black", "white", "brown"]
     
     // DESTINATION FOR DRAGGED ITEMS
-    const [board, setBoard] = useState([]);
+    // const [board, setBoard] = useState([]);
+
     // MONITORING WHETHER THE ITEM IS BEING DROPPED
-    const [{isOver}, drop] = useDrop(() => ({
-        accept: "colour",
-        drop: (item) => addItemToBoard(item.id),
-        collect: (monitor) => ({
-            isOver: !!monitor.isOver(),
-        }),
-    }));
+    
+    // const [{isOver}, drop] = useDrop(() => ({
+    //     accept: "colour",
+    //     drop: (item) => addItemToBoard(item.id),
+    //     collect: (monitor) => ({
+    //         isOver: !!monitor.isOver(),
+    //     }),
+    // }));
+
+    const [board, setBoard] = useState([]);
 
     const addItemToBoard = (id) => {
         // console.log(id);
@@ -63,19 +69,35 @@ const DragDrop = ({words}) => {
         // setBoard([copyColourList[0]]);
     };
 
+    // const DropZone = () => {
+    //     const ref = useRef(null);
+    //     const [, drop] = useDrop({
+    //       accept: "card",
+    //       drop(item) {
+    //         changeTaskStatus(item.id, status);
+    //       }
+    //     });
+    //     drop(ref);
+    //     return <div ref={ref}> {children}</div>;
+    //   };
+
     return (
-        <>
-        <div className="dnd-colours">
-            {colourList.map((colour) => {
-                return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
-            })}
+        <div id="paints-and-board">
+            <div className="dnd-colours">
+                {colourList.map((colour) => {
+                    return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
+                })}
+            </div>
+            {/* <div className="dnd-board" ref={drop}> */}
+            <div className="dnd-board">
+                {colourList.map((colour) => {
+                    return <DropZone key={colour.id} type={colour.english} name={colour.english} spanish={colour.translation} colourList={colourList} />
+                })}
+                {/* {board.map((colour) => {
+                    return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
+                })} */}
+            </div>
         </div>
-        <div className="dnd-board" ref={drop}>
-            {board.map((colour) => {
-                return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
-            })}
-        </div>
-        </>
     );
     
 }

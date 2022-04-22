@@ -1,25 +1,26 @@
 import { useDrag } from 'react-dnd';
 
-function Colour({name, img, id}) {
+const Colour = ({name, img, id}) => {
     // MONITORING THE ITEM BEING DRAGGED
     const [{isDragging}, drag] = useDrag(() => ({
-        type: "colour",
+        type: name,
         item: {id: id},
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
         }),
     }));
 
-    const imageSrc = require(`../images/colours/${name}.png`)
+    const imageSrc = require(`../images/colours/${name}.png`);
 
     return (
         <>
             <img
+                className="paint-cans"
                 ref={drag}
                 src={imageSrc}
                 alt="Coloured paint can"
                 width="150px"
-                style={{ border: isDragging ? "5px solid purple" : "0px"}}
+                style={{ opacity: isDragging ? "0.5" : "1"}}
             />
         </>
     );
