@@ -3,13 +3,13 @@ import SingleCard from "../components/SingleCard";
 
 
 const cardImages = [
-    {"src": "/img/apple.pic.png" , matched: false},
+    {"src": "/img/manzanaa.png" , matched: false},
     {"src": "/img/bus.png" , matched: false},
     {"src": "/img/pez.png" , matched: false},
     {"src": "/img/rojo.png" , matched: false},
     {"src": "/img/tres.png" , matched: false},
     {"src": "/img/perro.png" , matched: false},
-    {"src": "/img/manzanap.png" , matched: false},
+    {"src": "/img/manzana.png" , matched: false},
     {"src": "/img/autobusp.png" , matched: false},
     {"src": "/img/pezp.png" , matched: false},
     {"src": "/img/rojop.png" , matched: false},
@@ -60,16 +60,28 @@ function Game() {
     //compare 2 selected cards
     useEffect(() => {
         if (choiceOne && choiceTwo) {
+
             if (choiceOne.src === choiceTwo.src) {
                 // console.log("Those cards match")
+                setCards(prevCards => {
+                    return prevCards.map(card => {
+                        if (card.src === choiceOne.src) {
+                            return {...card, matched :true}
+                        }else {
+                            return card
+                        }
+                    })
+                })
                 resetTurn()
             }else{
                 // console.log("Those card do not match")
-                resetTurn()
+                //this settimeout will delay the card by 1000miliseconds(a second) to turn if do not macth
+                setTimeout(() => resetTurn(), 1000)
             }
         }
 
     },[choiceOne,choiceTwo])
+    console.log(cards)
 
     //reset choices and increase turn
     const resetTurn = () => {
@@ -85,7 +97,12 @@ function Game() {
 
             <div className="card-grid">
                 {cards.map(card => (
-                    <SingleCard key = {card.id} card={card} handleChoice={handleChoice}/>
+                    <SingleCard 
+                    key = {card.id} 
+                    card={card} 
+                    handleChoice={handleChoice} 
+                    flipped={card === choiceOne ||
+                    card === choiceOne || card.matched} />
                 ))}
 
             </div>
