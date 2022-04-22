@@ -6,16 +6,17 @@ import {words_data} from './words_data.js';
 
 function App() {
   const [words, setWords] = useState(words_data);
-  const [lessonsCompleted, setLessonsCompleted] = useState(0);
+  const [lessonsCompleted, setLessonsCompleted] = useState(1); //CHANGE lessonsCompleted BACK TO 0 BEFORE PUSHING
 
 
 
   return (
     <div className="App">
       <h1>Trash Panda at your service</h1>
-      {lessonsCompleted < 3 ?
+      {/* UNCOMMENT LINES BELOW BEFORE PUSHING */}
+      {/* {lessonsCompleted < 3 ? */}
       <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
-      : <Game words={words}/> }
+      {/* : <Game words={words}/> } */}
     </div>
   );
 }

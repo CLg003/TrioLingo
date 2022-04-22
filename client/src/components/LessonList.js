@@ -5,20 +5,20 @@ import LessonStyleThree from './LessonStyleThree';
 
 const LessonList = ({ words, lessonsCompleted }) => {
 
-        
-            if (lessonsCompleted === 0){
-                return(
-                    <LessonStyleOne words={words.numbers}/>
-                )
-                } else if (lessonsCompleted === 1) {
+        // UNCOMMENT LINES BELOW BEFORE PUSHING
+            // if (lessonsCompleted === 0){
+            //     return(
+            //         <LessonStyleOne words={words.numbers}/>
+            //     )
+            //     } else if (lessonsCompleted === 1) {
                 return (
                     <LessonStyleTwo words={words.colours}/>
                 )
-                } else {
-                return(
-                    <LessonStyleThree words={words.animals}/>
-                )
-                }
+                // } else {
+                // return(
+                //     <LessonStyleThree words={words.animals}/>
+                // )
+                // }
             }
 
 export default LessonList;
