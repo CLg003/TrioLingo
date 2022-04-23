@@ -77,6 +77,12 @@
     animation-delay: 27s;
 }
 
+.ten {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 30s;
+}
+
 
 /* remove list styling */
 
