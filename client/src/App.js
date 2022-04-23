@@ -13,10 +13,9 @@ function App() {
   return (
     <div className="App">
       <h1>Trash Panda at your service</h1>
-      <Game />
-      {/* {lessonsCompleted < 3 ?
+      {lessonsCompleted < 3 ?
       <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
-      : <Game words={words}/> } */}
+      : <Game words={words}/> }
     </div>
   );
 }
