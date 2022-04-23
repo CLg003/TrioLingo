@@ -76,47 +76,47 @@ export const words_data = {
     numbers: {
         zero: {
             translation: "cero",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570095.png"
         },
         one: {
             translation: "uno",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570098.png"
         },
         two: {
             translation: "dos",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570100.png"
         },
         three: {
             translation: "tres",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570103.png"
         },
         four: {
             translation: "cuatro",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570104.png"
         },
         five: {
             translation: "cinco",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570107.png"
         },
         six: {
             translation: "seis",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570112.png"
         },
         seven: {
             translation: "siete",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570115.png"
         },
         eight: {
             translation: "ocho",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570118.png"
         },
         nine: {
             translation: "nueve",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570120.png"
         },
         ten: {
             translation: "diez",
-            img: ""
+            img: "https://cdn-icons-png.flaticon.com/512/3570/3570098.png"
         }
     },
 }
