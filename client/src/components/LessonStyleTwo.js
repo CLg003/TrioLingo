@@ -55,7 +55,7 @@ const LessonStyleTwo = ({words}) => {
 
     return (
         <div id="lesson-2">
-            <h2>Lesson 2</h2>
+            <h3>Lesson 2</h3>
             {/* DnD FUNCTIONALITY WRAPPER */}
             <DndProvider backend={HTML5Backend}>
                 <div id="drag-drop-lesson">

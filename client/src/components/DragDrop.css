@@ -8,6 +8,18 @@
     height: 100%;
 }
 
+#topic-heading {
+}
+
+#instructions {
+    display: flex;
+    align-items: baseline;
+}
+
+#instructions > h4 {
+    margin-right: 10px;
+}
+
 #paints-and-board {
     display: flex;
     flex-direction: row;
@@ -116,5 +128,27 @@
 .yellow {
     color: yellow;
     text-shadow: 1px 1px black;
+}
 
+#reset-drag-n-drop {
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+    width: 120px;
+    margin: auto;
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#take-the-quiz {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#take-the-quiz > span {
+    background-color: lightgray;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
