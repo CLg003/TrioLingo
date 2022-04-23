@@ -97,7 +97,7 @@ export const words_data = {
 
             english: "zero",
             translation: "cero",
-            img: "../images/numbers/0.png"
+            img: "0.png"
         },
         one: {
             english: "one",
