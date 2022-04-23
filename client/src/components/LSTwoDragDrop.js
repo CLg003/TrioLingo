@@ -9,7 +9,7 @@ import '../LSTwoDragDrop.css';
 const DragDrop = ({words}) => {
     // NEED AN ARRAY OF THE COLOURS FOR DnD
     const colourList = [words.black, words.blue, words.brown, words.green, words.orange, words.purple, words.red, words.white, words.yellow];
-    // ADDING COLOUR PROPERTY
+    // ADDING COLOUR NAME (ENGLISH) PROPERTY
     colourList[0]['english'] = "black";
     colourList[1]['english'] = "blue";
     colourList[2]['english'] = "brown";
@@ -44,58 +44,20 @@ const DragDrop = ({words}) => {
 
     const dropZones = ["red", "orange", "yellow", "green", "blue", "purple", "black", "white", "brown"]
     
-    // DESTINATION FOR DRAGGED ITEMS
-    // const [board, setBoard] = useState([]);
-
-    // MONITORING WHETHER THE ITEM IS BEING DROPPED
-    
-    // const [{isOver}, drop] = useDrop(() => ({
-    //     accept: "colour",
-    //     drop: (item) => addItemToBoard(item.id),
-    //     collect: (monitor) => ({
-    //         isOver: !!monitor.isOver(),
-    //     }),
-    // }));
-
-    const [board, setBoard] = useState([]);
-
-    const addItemToBoard = (id) => {
-        // console.log(id);
-        const copyColourList = colourList.filter((colour) => id === colour.id);
-        // TO ADD TO THE SELECTION OF DRAGGED ITEMS:
-        setBoard((board) => [...board, copyColourList[0]]);
-
-        // TO REPLACE CURRENT ITEM WITH DRAGGED ITEM:
-        // setBoard([copyColourList[0]]);
-    };
-
-    // const DropZone = () => {
-    //     const ref = useRef(null);
-    //     const [, drop] = useDrop({
-    //       accept: "card",
-    //       drop(item) {
-    //         changeTaskStatus(item.id, status);
-    //       }
-    //     });
-    //     drop(ref);
-    //     return <div ref={ref}> {children}</div>;
-    //   };
+    // CODE TO SHUFFLE colourList:
+    // colourList.sort(function(a, b){return 0.5 - Math.random()});
 
     return (
         <div id="paints-and-board">
             <div className="dnd-colours">
-                {colourList.map((colour) => {
+                {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
                     return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
                 })}
             </div>
-            {/* <div className="dnd-board" ref={drop}> */}
             <div className="dnd-board">
-                {colourList.map((colour) => {
+                {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
                     return <DropZone key={colour.id} type={colour.english} name={colour.english} spanish={colour.translation} colourList={colourList} />
                 })}
-                {/* {board.map((colour) => {
-                    return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
-                })} */}
             </div>
         </div>
     );
