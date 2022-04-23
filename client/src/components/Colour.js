@@ -1,5 +1,5 @@
 import { useDrag } from 'react-dnd';
-import React from "react";
+import React from 'react';
 
 
 const Colour = ({name, img, id}) => {
@@ -15,7 +15,6 @@ const Colour = ({name, img, id}) => {
     const imageSrc = require(`../images/colours/icons8-fill-color-96${name.toUpperCase()}.png`);
 
     return (
-        <>
             <img
                 className="paint-cans"
                 ref={drag}
@@ -24,7 +23,6 @@ const Colour = ({name, img, id}) => {
                 width="150px"
                 style={{ opacity: isDragging ? "0.5" : "1"}}
             />
-        </>
     );
 }
 
