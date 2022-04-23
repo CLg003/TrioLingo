@@ -10,16 +10,18 @@ export const words_data = {
             translation: "gato",
             img: "src/images/animals/icons8-cat-96.png"
         },
+
         fish: { /// racoon not available
-            translation: "src/images/animals/icons8-flounder-fish-96.png",
-            img: ""
+            translation: "pescado",
+            img: "src/images/animals/icons8-flounder-fish-96.png"
         },
         duck: {
             translation: "pato",
             img: "src/images/animals/icons8-rubber-duck-96.png"
         },
+
         penguin: { // eagle not available
-            translation: "",
+            translation: "pinguino",
             img: "src/images/animals/icons8-penguin-96.png"
         },
         dinosaur: {
