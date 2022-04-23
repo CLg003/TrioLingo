@@ -5,7 +5,7 @@ export const words_data = {
         dog: {
             english: "dog",
             translation: "perro",
-            img: "src/images/animals/icons8-fat-dog-96.png"
+            img: "../src/images/animals/icons8-fat-dog-96.png"
         },
         cat: {
             english: "cat",
@@ -97,7 +97,7 @@ export const words_data = {
 
             english: "zero",
             translation: "cero",
-            img: "src/images/numbers/0.png"
+            img: "../images/numbers/0.png"
         },
         one: {
             english: "one",

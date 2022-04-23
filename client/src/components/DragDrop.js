@@ -1,7 +1,7 @@
 import React from "react";
-import Colour from './LSTwoColour';
-import DropZone from './LSTwoDropZone';
-import '../LSTwoDragDrop.css';
+import Colour from './Colour';
+import DropZone from './DropZone';
+import './DragDrop.css';
 
 
 const DragDrop = ({words}) => {

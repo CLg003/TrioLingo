@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from "react";
 import { useDrop } from 'react-dnd';
-import Colour from './LSTwoColour';
+import Colour from './Colour';
 
 const DropZone = ({type, name, spanish, colourList}) => {
 
