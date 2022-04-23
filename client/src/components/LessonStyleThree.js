@@ -17,88 +17,88 @@ const LessonStyleThree = ({words}) => {
     return (
         <>
         <h2>Animals Lesson</h2>
-        <p>The <button type="button" 
-                        onMouseEnter={() => setShowDogContent(true)}
-                        onMouseLeave={() => setShowDogContent(false)}>
-                        {words.dog.translation}  
-                </button> chases a ball</p>
+        <p>The <span 
+                    onMouseEnter={() => setShowDogContent(true)}
+                    onMouseLeave={() => setShowDogContent(false)}>
+                    {words.dog.translation}  
+                </span> chases a ball</p>
         {showDogContent && (
         <div>
           {words.dog.english}
         </div>
       )}
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowCatContent(true)}
-                        onMouseLeave={() => setShowCatContent(false)}>
-                        {words.cat.translation}
-                </button> is asleep</p>
+        <p>The <span
+                    onMouseEnter={() => setShowCatContent(true)}
+                    onMouseLeave={() => setShowCatContent(false)}>
+                    {words.cat.translation}
+                </span> is asleep</p>
         {showCatContent && (
         <div>
           {words.cat.english}
         </div>
       )} 
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowFishContent(true)}
-                        onMouseLeave={() => setShowFishContent(false)}>
-                        {words.fish.translation}
-                </button> swims in the sea</p>
+        <p>The <span
+                    onMouseEnter={() => setShowFishContent(true)}
+                    onMouseLeave={() => setShowFishContent(false)}>
+                    {words.fish.translation}
+                </span> swims in the sea</p>
         {showFishContent && (
         <div>
           {words.fish.english}
         </div>
       )}     
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowDuckContent(true)}
-                        onMouseLeave={() => setShowDuckContent(false)}>
-                        {words.duck.translation}
-                </button> swims on the pond</p>
+        <p>The <span
+                    onMouseEnter={() => setShowDuckContent(true)}
+                    onMouseLeave={() => setShowDuckContent(false)}>
+                    {words.duck.translation}
+                </span> swims on the pond</p>
         {showDuckContent && (
         <div>
           {words.duck.english}
         </div>
       )}     
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowPenguinContent(true)}
-                        onMouseLeave={() => setShowPenguinContent(false)}>
-                        {words.penguin.translation}
-                </button> is eating fish</p>
+        <p>The <span
+                    onMouseEnter={() => setShowPenguinContent(true)}
+                    onMouseLeave={() => setShowPenguinContent(false)}>
+                    {words.penguin.translation}
+                </span> is eating fish</p>
         {showPenguinContent && (
         <div>
           {words.penguin.english}
         </div>
       )}     
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowDinoContent(true)}
-                        onMouseLeave={() => setShowDinoContent(false)}>
-                        {words.dinosaur.translation}
-                </button> is frightening</p>
+        <p>The <span
+                    onMouseEnter={() => setShowDinoContent(true)}
+                    onMouseLeave={() => setShowDinoContent(false)}>
+                    {words.dinosaur.translation}
+                </span> is frightening</p>
         {showDinoContent && (
         <div>
           {words.dinosaur.english}
         </div>
       )}     
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowPigContent(true)}
-                        onMouseLeave={() => setShowPigContent(false)}>
-                        {words.pig.translation}
-                </button> lives on the farm</p>
+        <p>The <span
+                    onMouseEnter={() => setShowPigContent(true)}
+                    onMouseLeave={() => setShowPigContent(false)}>
+                    {words.pig.translation}
+                </span> lives on the farm</p>
         {showPigContent && (
         <div>
           {words.pig.english}
         </div>
       )}     
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowFrogContent(true)}
-                        onMouseLeave={() => setShowFrogContent(false)}>
-                        {words.frog.translation}
-                </button> goes "Croak"</p>
+        <p>The <span
+                    onMouseEnter={() => setShowFrogContent(true)}
+                    onMouseLeave={() => setShowFrogContent(false)}>
+                    {words.frog.translation}
+                </span> goes "Croak"</p>
         {showFrogContent && (
         <div>
           {words.frog.english}
