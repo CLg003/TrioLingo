@@ -5,7 +5,6 @@ import LessonStyleThree from './LessonStyleThree';
 
 const LessonList = ({ words, lessonsCompleted }) => {
 
-        
             if (lessonsCompleted === 0){
                 return(
                     <LessonStyleOne words={words.numbers}/>

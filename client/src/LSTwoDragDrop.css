@@ -1,0 +1,80 @@
+.drag-drop-lesson {
+    
+}
+
+#paints-and-board {
+    display: flex;
+    flex-direction: row;
+}
+
+.dnd-colours {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.paint-cans {
+    flex-basis: 25%;
+    padding: 20px 10px;    
+}
+
+.dnd-board {
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: wrap row;
+}
+
+.dropzone {
+    height: 180px;
+    width: 180px;
+    flex-basis: 25%;
+    justify-content: space-evenly;
+    text-align: center;
+    /* padding: 50px 0; */
+    /* border: 1px solid black; */
+    margin: 10px;
+}
+
+.dropzone > p {
+    padding: 50px 0;
+    font-size: 30px;
+}
+
+.black {
+    color: black;
+}
+.blue {
+    color: blue;
+}
+.brown {
+    color: brown;
+}
+.green {
+    color: green;
+}
+.orange {
+    color: orange;
+}
+.purple {
+    color: purple;
+}
+.red {
+    color: red;
+}
+.white {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+.yellow {
+    color: yellow;
+}
