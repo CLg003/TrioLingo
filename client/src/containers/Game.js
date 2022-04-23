@@ -32,7 +32,7 @@ function Game() {
 
     const [disabled, setDisabled] = useState(false)
 
-
+//shuffle cards function
     const shuffleCards = () => {
         const shuffledCards = [...cardImages]
         // the sort method will fire a function for each pair of item of
@@ -41,6 +41,9 @@ function Game() {
         // greater than 0 the odd will be mixed up / Math.random will give us a random number. the end result will be a shuffled array with a random id
         .sort(() => Math.random() - 0.5)
         .map((card) => ({...card , id: Math.random()}))
+
+        setChoiceOne(null)
+        setChoiceTwo(null)
 
         setCards(shuffledCards)
         setTurns(0)
@@ -57,6 +60,8 @@ function Game() {
     //compare 2 selected cards
     useEffect(() => {
         if (choiceOne && choiceTwo) {
+    //cards are disabled to true after the user makes 2 choices, 
+    // meaning the user cannot click a 3rd choice" 
             setDisabled(true)
 
             if (choiceOne.name === choiceTwo.name) {
@@ -89,11 +94,16 @@ function Game() {
         setDisabled(false)
     }
 
+    //start a new game automatically
+    useEffect(() => {
+        shuffleCards()
+    } , [])
+
     return (
         <div className="Game">
             <h1> Test your Memoria </h1>
             <button onClick = {shuffleCards}> New Game </button>
-
+            <p>Turns: {turns} </p>
             <div className="card-grid">
                 {cards.map(card => (
                     <SingleCard 
