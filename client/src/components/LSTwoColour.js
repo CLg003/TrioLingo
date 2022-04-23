@@ -1,4 +1,6 @@
 import { useDrag } from 'react-dnd';
+import React from "react";
+
 
 const Colour = ({name, img, id}) => {
     // MONITORING THE ITEM BEING DRAGGED
@@ -10,7 +12,7 @@ const Colour = ({name, img, id}) => {
         }),
     }));
 
-    const imageSrc = require(`../images/colours/${name}.png`);
+    const imageSrc = require(`../images/colours/icons8-fill-color-96${name.toUpperCase()}.png`);
 
     return (
         <>

@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import {useState} from 'react';
 import LessonList from './components/LessonList';
 import Game from './containers/Game';
@@ -6,7 +7,7 @@ import {words_data} from './words_data.js';
 
 function App() {
   const [words, setWords] = useState(words_data);
-  const [lessonsCompleted, setLessonsCompleted] = useState(2);
+  const [lessonsCompleted, setLessonsCompleted] = useState(3);
   //note I have changed this - should be useState(0)
 
 
@@ -14,10 +15,9 @@ function App() {
   return (
     <div className="App">
       <h1>Trash Panda at your service</h1>
-      <Game />
-      {/* {lessonsCompleted < 3 ?
+      {lessonsCompleted < 3 ?
       <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
-      : <Game words={words}/> } */}
+      : <Game words={words}/> }
     </div>
   );
 }

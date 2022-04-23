@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import { useDrop } from 'react-dnd';
+import React from "react";
 import Colour from './LSTwoColour';
 import DropZone from './LSTwoDropZone';
 import '../LSTwoDragDrop.css';
-
 
 
 const DragDrop = ({words}) => {
@@ -42,7 +40,7 @@ const DragDrop = ({words}) => {
 
     // console.log(colourList);
 
-    const dropZones = ["red", "orange", "yellow", "green", "blue", "purple", "black", "white", "brown"]
+    // const dropZones = ["red", "orange", "yellow", "green", "blue", "purple", "black", "white", "brown"]
     
     // CODE TO SHUFFLE colourList:
     // colourList.sort(function(a, b){return 0.5 - Math.random()});

@@ -1,4 +1,5 @@
 import { DndProvider } from 'react-dnd';
+import React from "react";
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import DragDrop from './LSTwoDragDrop';
 

@@ -1,3 +1,4 @@
+import React from "react";
 import LessonStyleOne  from './LessonStyleOne';
 import LessonStyleTwo from './LessonStyleTwo';
 import LessonStyleThree from './LessonStyleThree';

@@ -1,4 +1,5 @@
 import './lessonstyleone.css';
+import React from "react";
 import {useToggle} from './../hooks.js'
 
 
@@ -82,11 +83,6 @@ const LessonStyleOne = ({words}) => {
         <div>
             <button onClick={toggle}  disabled={!toggleState}>
                 Translate
-            </button>
-        </div>
-        <div>
-            <button>
-                Go to Quiz
             </button>
         </div>
         </div>
