@@ -26,7 +26,6 @@ const LessonStyleOne = ({words}) => {
 
     const numberWords = [words.zero, words.one, words.two, words.three, words.four, words.five, words.six, words.seven, words.eight, words.nine, words.ten ]
     
-    //testing sprites 
 
     const [play] = useSound(numbersSound, {
         sprite : {
@@ -45,13 +44,10 @@ const LessonStyleOne = ({words}) => {
 })
 
 
-// writing useSound hook for the colours (to be moved after merge)
-
-
 
     if (!showLesson ) {
         return (
-        <Quiz wordsList={numberWords} />
+        <Quiz wordList={numberWords} />
         )
     } else {
         return(
@@ -160,6 +156,10 @@ const LessonStyleOne = ({words}) => {
                     Translate
                 </button>
             </div>
+            <div> 
+            <button onClick={showQuiz}>
+                Quiz Yourself!
+            </button></div>
             </div>
         )
     }

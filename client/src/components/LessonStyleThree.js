@@ -3,6 +3,8 @@ import React from "react";
 import './lessonstylethree.css';
 import {useSound} from 'use-sound';
 import animalSound from '../sound/All_animals.mp4'
+import Quiz from './Quiz.js'
+import {useToggle} from '../hooks.js'
 
 
 
@@ -16,6 +18,7 @@ const LessonStyleThree = ({words}) => {
     const [showDinoContent, setShowDinoContent] = useState(false);
     const [showPigContent, setShowPigContent] = useState(false);
     const [showFrogContent, setShowFrogContent] = useState(false);
+    const [showLesson, showQuiz] = useToggle();
 
 
     const [play] = useSound(animalSound, {
@@ -31,6 +34,9 @@ const LessonStyleThree = ({words}) => {
     }
 });
 
+const wordList = [words.dog, words.cat, words.fish, words.duck, words.penguin, words.dinosaur, words.pig, words.frog]
+
+if (showLesson) {
 
     return (
         <>
@@ -38,8 +44,8 @@ const LessonStyleThree = ({words}) => {
         
         <p><img onClick={()=>play( {id: 'dog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
         The <span onMouseEnter={() => setShowDogContent(true)}
-                     onMouseLeave={() => setShowDogContent(false)}>
-                       {showDogContent ? (words.dog.english) : (words.dog.translation)}
+                    onMouseLeave={() => setShowDogContent(false)}>
+                      {showDogContent ? (words.dog.english) : (words.dog.translation)}
                 </span> chases a ball
                 <img src={`${process.env.PUBLIC_URL}${words.dog.img}`} alt="fat dog"/>
         </p>
@@ -106,9 +112,16 @@ const LessonStyleThree = ({words}) => {
                 </span> goes "Croak"
                 <img src={`${process.env.PUBLIC_URL}${words.frog.img}`} alt="frog"/>
         </p>
+        <div> 
+            <button onClick={showQuiz}>
+                Quiz Yourself!
+            </button></div>
         </>
 
-    );
+    )
+    }
+    else
+    {return <Quiz wordList={wordList}/>}
 
 }
 
