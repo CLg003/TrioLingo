@@ -1,7 +1,18 @@
-import React from 'react';
+import React  , { useState } from 'react';
 import './Quiz.css';
 
+
+
 const Quiz = ({wordList}) => {
+
+    const[questionOneAnswer , setQuestionOneAnswer] = useState(null);
+    const[questionTwoAnswer , setQuestionTwoAnswer] = useState(null);
+    const[questionThreeAnswer , setQuestionThreeAnswer] = useState(null);
+    const[questionFourAnswer , setQuestionFourAnswer] = useState(null);
+    const[questionFiveAnswer , setQuestionFiveAnswer] = useState(null);
+
+    const[formSubmit, setFormSubmit] = useState()
+    
 
     const copyWordList = [...wordList]
 
@@ -56,12 +67,32 @@ const Quiz = ({wordList}) => {
     questionFiveWrongAnswersList.splice((questionFiveWrongAnswersList.indexOf(q5WrongA)), 1);
     const q5WrongB = questionFiveWrongAnswersList[Math.floor(Math.random()*questionFiveWrongAnswersList.length)];
 
+const handleChangeQ1 = (event) => {
+    setQuestionOneAnswer(event.target.value)
+}
+const handleChangeQ2 = (event) => {
+    setQuestionTwoAnswer(event.target.value)
+}
+const handleChangeQ3 = (event) => {
+    setQuestionThreeAnswer(event.target.value)
+}
+const handleChangeQ4 = (event) => {
+    setQuestionFourAnswer(event.target.value)
+}
+const handleChangeQ5 = (event) => {
+    setQuestionFiveAnswer(event.target.value)
+}
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event);
+}
 
     return (
         <div id="quiz">
             <h3 id="topic-heading">Quiz</h3>
             <p>Have fun with this little quiz to test your Spanish!</p>
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 {/* QUESTION 1 */}
                 <div className="question-div q1-div">
@@ -143,7 +174,7 @@ const Quiz = ({wordList}) => {
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-3">
-                            {questionFourWrongAnswersList[Math.floor(Math.random()*questionOneWrongAnswersList.length)].english} 
+                            {q4WrongB.english} 
                         </label>
                         <input type="radio" id="option-3" name="question-4" value="wrong"/>
                     </div>
@@ -169,6 +200,10 @@ const Quiz = ({wordList}) => {
                         <input type="radio" id="option-3" name="question-5" value="wrong"/>
                     </div>
                 </div>
+                <input type="submit" >
+
+                </input>
+
                 
             </form>
         </div>
