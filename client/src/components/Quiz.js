@@ -5,7 +5,7 @@ const Quiz = () => {
 
     return (
         <div id="quiz">
-            <h2 id="topic-heading">Colours Quiz</h2>
+            <h3 id="topic-heading">Quiz</h3>
             <p>Intro paragraph here</p>
             <form>
                 

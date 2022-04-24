@@ -3,6 +3,7 @@ import React from 'react';
 
 
 const Colour = ({name, img, id}) => {
+    
     // MONITORING THE ITEM BEING DRAGGED
     const [{isDragging}, drag] = useDrag(() => ({
         type: name,
