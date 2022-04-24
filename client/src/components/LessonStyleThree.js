@@ -34,7 +34,7 @@ const LessonStyleThree = ({words}) => {
     }
 });
 
-const wordList = [words.dog, words.cat, words.fish, words.duck, words.penguin, words.dinosaur, words.pig, words.frog]
+const animalList = [words.dog, words.cat, words.fish, words.duck, words.penguin, words.dinosaur, words.pig, words.frog]
 
 if (showLesson) {
 
@@ -121,7 +121,7 @@ if (showLesson) {
     )
     }
     else
-    {return <Quiz wordList={wordList}/>}
+    {return <Quiz wordList={animalList}/>}
 
 }
 
