@@ -1,0 +1,29 @@
+#quiz {
+    width: 100%;
+    height: 100%;
+}
+
+.question-div {
+    display: flex;
+    align-items: center;
+}
+
+.question-div > img {
+    height: 150px;
+    margin: 5px;
+    padding: 10px 40px;
+}
+
+.question-number {
+    font-weight: bold;
+}
+
+.question {
+}
+
+.question-text {
+}
+
+.question-text > input {
+    margin-right: 20px;
+}

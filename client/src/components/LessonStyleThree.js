@@ -1,5 +1,6 @@
 import {useState} from "react";
 import React from "react";
+import './lessonstylethree.css';
 
 
 const LessonStyleThree = ({words}) => {
@@ -17,93 +18,69 @@ const LessonStyleThree = ({words}) => {
     return (
         <>
         <h2>Animals Lesson</h2>
-        <p>The <button type="button" 
-                        onMouseEnter={() => setShowDogContent(true)}
-                        onMouseLeave={() => setShowDogContent(false)}>
-                        dog    
-                </button> chases a ball</p>
-        {showDogContent && (
-        <div>
-          {words.dog.translation}
-        </div>
-      )}
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowCatContent(true)}
-                        onMouseLeave={() => setShowCatContent(false)}>
-                        cat
-                </button> is asleep</p>
-        {showCatContent && (
-        <div>
-          {words.cat.translation}
-        </div>
-      )} 
+        <p>The <span onMouseEnter={() => setShowDogContent(true)}
+                     onMouseLeave={() => setShowDogContent(false)}>
+                       {showDogContent ? (words.dog.english) : (words.dog.translation)}
+                </span> chases a ball
+                <img src={`${process.env.PUBLIC_URL}${words.dog.img}`} alt="fat dog"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowFishContent(true)}
-                        onMouseLeave={() => setShowFishContent(false)}>
-                        fish
-                </button> swims in the sea</p>
-        {showFishContent && (
-        <div>
-          {words.fish.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowCatContent(true)}
+                    onMouseLeave={() => setShowCatContent(false)}>
+                      {showCatContent ? (words.cat.english) : (words.cat.translation)}
+                </span> is asleep
+                <img src={`${process.env.PUBLIC_URL}${words.cat.img}`} alt="cat"/>
+        </p>
+
+        <p>The <span
+                    onMouseEnter={() => setShowFishContent(true)}
+                    onMouseLeave={() => setShowFishContent(false)}>
+                      {showFishContent ? (words.fish.english) : (words.fish.translation)}
+                </span> swims in the sea
+                <img src={`${process.env.PUBLIC_URL}${words.fish.img}`} alt="fish"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowDuckContent(true)}
-                        onMouseLeave={() => setShowDuckContent(false)}>
-                        duck
-                </button> swims on the pond</p>
-        {showDuckContent && (
-        <div>
-          {words.duck.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowDuckContent(true)}
+                    onMouseLeave={() => setShowDuckContent(false)}>
+                      {showDuckContent ? (words.duck.english) : (words.duck.translation)}
+                </span> swims on the pond
+                <img src={`${process.env.PUBLIC_URL}${words.duck.img}`} alt="duck"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowPenguinContent(true)}
-                        onMouseLeave={() => setShowPenguinContent(false)}>
-                        penguin
-                </button> is eating fish</p>
-        {showPenguinContent && (
-        <div>
-          {words.penguin.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowPenguinContent(true)}
+                    onMouseLeave={() => setShowPenguinContent(false)}>
+                      {showPenguinContent ? (words.penguin.english) : (words.penguin.translation)}
+                </span> is eating fish
+                <img src={`${process.env.PUBLIC_URL}${words.penguin.img}`} alt="penguin"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowDinoContent(true)}
-                        onMouseLeave={() => setShowDinoContent(false)}>
-                        dinosaur
-                </button> is frightening</p>
-        {showDinoContent && (
-        <div>
-          {words.dinosaur.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowDinoContent(true)}
+                    onMouseLeave={() => setShowDinoContent(false)}>
+                      {showDinoContent ? (words.dinosaur.english) : (words.dinosaur.translation)}
+                </span> is frightening
+                <img src={`${process.env.PUBLIC_URL}${words.dinosaur.img}`} alt="dinosaur"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowPigContent(true)}
-                        onMouseLeave={() => setShowPigContent(false)}>
-                        pig
-                </button> lives on the farm</p>
-        {showPigContent && (
-        <div>
-          {words.pig.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowPigContent(true)}
+                    onMouseLeave={() => setShowPigContent(false)}>
+                      {showPigContent ? (words.pig.english) : (words.pig.translation)}
+                </span> lives on the farm
+                <img src={`${process.env.PUBLIC_URL}${words.pig.img}`} alt="pig"/>
+        </p>
         
-        <p>The <button type="button"
-                        onMouseEnter={() => setShowFrogContent(true)}
-                        onMouseLeave={() => setShowFrogContent(false)}>
-                        frog
-                </button> goes "Croak"</p>
-        {showFrogContent && (
-        <div>
-          {words.frog.translation}
-        </div>
-      )}     
+        <p>The <span
+                    onMouseEnter={() => setShowFrogContent(true)}
+                    onMouseLeave={() => setShowFrogContent(false)}>
+                      {showFrogContent ? (words.frog.english) : (words.frog.translation)}
+                </span> goes "Croak"
+                <img src={`${process.env.PUBLIC_URL}${words.frog.img}`} alt="frog"/>
+        </p>
         </>
 
     );
