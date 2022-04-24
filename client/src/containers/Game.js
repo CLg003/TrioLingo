@@ -3,18 +3,12 @@ import SingleCard from "../components/SingleCard";
 
 
 const cardImages = [
-    {"src": "/img/manzanaa.png" , matched: false , name: "manzana"},
-    {"src": "/img/bus.png" , matched: false , name: "bus"},
-    {"src": "/img/pez.png" , matched: false , name: "pez"},
-    {"src": "/img/rojo.png" , matched: false , name: "rojo"},
-    {"src": "/img/tres.png" , matched: false , name: "tres"},
-    {"src": "/img/perro.png" , matched: false , name: "perro"},
-    {"src": "/img/manzana.png" , matched: false , name: "manzana"},
-    {"src": "/img/autobusp.png" , matched: false , name: "bus"},
-    {"src": "/img/pezp.png" , matched: false, name: "pez"},
-    {"src": "/img/rojop.png" , matched: false , name: "rojo"},
-    {"src": "/img/tresp.png" , matched: false, name: "tres"},
-    {"src": "/img/perrop.png" , matched: false, name: "perro"}
+    {"src": "/images/animals/icons8-kawaii-dinosaur-96.png" , matched: false , name: "dinosaurio"},
+    {"src": "/images/animals/icons8-penguin-96.png" , matched: false , name: "pinguino"},
+    {"src": "/images/colours/icons8-fill-color-96PURPLE.png" , matched: false , name: "morado"},
+    {"src": "/images/colours/icons8-fill-color-96GREEN.png" , matched: false , name: "verde"},
+    {"src": "/images/numbers/004-4.png" , matched: false , name: "cuatro"},
+    {"src": "/images/numbers/008-8.png" , matched: false , name: "ocho"},
 ]
 
 
