@@ -1,6 +1,8 @@
 import './lessonstyleone.css';
 import React, {require} from "react";
 import {useToggle} from './../hooks.js'
+import {useSound} from 'use-sound';
+import zero from '../sound/0.mp4';
 
 
 
@@ -20,75 +22,81 @@ const LessonStyleOne = ({words}) => {
     const eight_img = require('../images/numbers/008-8.png');
     const nine_img = require('../images/numbers/009-9.png');
 
+    //testing sound play on hover
+
+    const [play, {stop}] = useSound(zero);
+
     return(
         <div >
         <ul className='numbers'>
             <li>
-                <div className={ toggleState? 'number-item' : 'zero'}>                    
-                    <img src={zero_img} alt="no image"/>
+                <div 
+                className={ toggleState? 'number-item' : 'zero'}
+                onMouseEnter={play} onMouseLeave={stop}>                    
+                    <img className="number-images" src={zero_img} alt="number icon"/>
 
                     {!toggleState? <h3>{words.zero.translation}</h3> : <h3>zero</h3> }
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'one'} >
-                    <img src={one_img}/>
+                    <img className="number-images" src={one_img} alt="number icon"/>
                     {!toggleState ? <h3>{words.one.translation}</h3> : <h3>one</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'two'} >
-                    <img src={two_img}></img>
+                    <img className="number-images" src={two_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.two.translation}</h3> : <h3>two</h3>}
                 </div>
             
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'three'}>
-                    <img src={three_img}></img>
+                    <img className="number-images" src={three_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.three.translation}</h3> : <h3>three</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'four'}>
-                    <img src={four_img}></img>
+                    <img className="number-images" src={four_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.four.translation}</h3> : <h3>four</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'five'}>
-                    <img src={five_img}></img>
+                    <img className="number-images" src={five_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.five.translation}</h3> : <h3>five</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'six'}>
-                    <img src={six_img}></img>
+                    <img className="number-images" src={six_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.six.translation}</h3> : <h3>six</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'seven'}>
-                    <img src={seven_img}></img>
+                    <img className="number-images" src={seven_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.seven.translation}</h3> : <h3>seven</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'eight'}>
-                    <img src={eight_img}></img>
+                    <img className="number-images" src={eight_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.eight.translation}</h3> : <h3>eight</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'nine'}>
-                    <img src={nine_img}></img>
+                    <img className="number-images" src={nine_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.nine.translation}</h3> : <h3>nine</h3>}
                 </div>
             </li>
             <li>
                 <div className={ toggleState? 'number-item' : 'ten'} onAnimationEnd={toggle}>
-                    <img src={one_img}></img>
-                    <img src={zero_img}></img>
+                    <img className="number-images" src={one_img} alt="number icon"></img>
+                    <img className="number-images" src={zero_img} alt="number icon"></img>
                     {!toggleState ? <h3>{words.ten.translation}</h3> : <h3>ten</h3>}
                 </div>
             </li>
