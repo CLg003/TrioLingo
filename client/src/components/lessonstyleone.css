@@ -1,4 +1,4 @@
-
+/* NEED TO UNCOMMENT img STYLING AT FOOT OF PAGE */
 /* animation */
 
 @keyframes grow {
@@ -102,6 +102,7 @@ li {
     text-align: center;
 }
 
-img {
+
+.number-images {
     width: 50px;
 }
