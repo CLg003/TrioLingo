@@ -1,0 +1,108 @@
+/* NEED TO UNCOMMENT img STYLING AT FOOT OF PAGE */
+/* animation */
+
+@keyframes grow {
+    0% {font-size: 1.17em;}
+    50% {font-size: 2em;}
+    100% {font-size: 1.17em;}
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number-item {
+
+
+    
+}
+
+.zero {
+    animation-name: grow;
+    animation-duration: 3s;
+}
+
+.one {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.two {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 6s;
+}
+
+.three {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 9s;
+}
+
+.four {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 12s;
+}
+
+.five {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 15s;
+}
+
+.six {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 18s;
+}
+
+.seven {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 21s;
+}
+
+.eight {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 24s;
+}
+
+.nine {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 27s;
+}
+
+.ten {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-delay: 30s;
+}
+
+
+/* remove list styling */
+
+ul {
+    padding:0;
+}
+
+li {
+    list-style: none;
+    /* border: solid; */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+
+.number-images {
+    width: 50px;
+}
