@@ -2,8 +2,7 @@ import './lessonstyleone.css';
 import React from "react";
 import {useToggle} from './../hooks.js'
 import {useSound} from 'use-sound';
-import zero from '../sound/0.mp4';
-import numbers from '../sound/0_to_10.mp4';
+import numbersSound from '../sound/0_to_10.mp4';
 
 
 const LessonStyleOne = ({words}) => {
@@ -24,7 +23,7 @@ const LessonStyleOne = ({words}) => {
     
     //testing sprites 
 
-    const [play] = useSound(numbers, {
+    const [play] = useSound(numbersSound, {
         sprite : {
             zero: [0, 2000],
             one : [3000, 2000],
@@ -40,8 +39,43 @@ const LessonStyleOne = ({words}) => {
         }
 })
 
+// writing usesound hook for animals (to be moved after merge)
+
+    // const [play] = useSound(animalsSound, {
+    //     sprite: {
+    //         dog: [1000, 2000],
+    //         cat: [2800, 2000],
+    //         fish: [5000, 1500],
+    //         duck: [7500, 2000],
+    //         penguin: [9500, 2000],
+    //         dinosaur: [11700, 2000],
+    //         pig: [14000, 1500],
+    //         frog: [16000, 1500]
+    //     }
+    // });
+
+// writing useSound hook for the colours (to be moved after merge)
+
+    // const [play] = useSound(coloursSound, {
+    //     sprite: {
+    //         red: [0, 1500],
+    //         green: [2500, 2000],
+    //         yellow: [4000, 2000],
+    //         orange: [6500, 2000],
+    //         brown: [8500, 2000],
+    //         blue: [10000, 2000],
+    //         white: [12500, 2000],
+    //         black: [14500, 2000],
+    //         purple: [16500, 2000]
+    //     }
+    // })
+
     return(
         <div >
+        <h3>Numbers Lesson</h3>
+        <p>Learn numbers 0 - 10 in spanish!</p>
+        <p>Press the 'translate' button to get started.</p>
+        <p>Tip: turn on your volumn to hear the words.</p>
         <ul className='numbers'>
             <li>
                 <div 
@@ -49,7 +83,7 @@ const LessonStyleOne = ({words}) => {
                 onAnimationStart={()=>play( {id: 'zero'})}>                    
                     <img className="number-images" src={zero_img} alt="number icon"/>
 
-                    {!toggleState? <h3>{words.zero.translation}</h3> : <h3>zero</h3> }
+                    {!toggleState? <h3>{words.zero.translation}</h3> : <h3>{words.zero.english}</h3> }
                 </div>
             </li>
             <li>
@@ -57,7 +91,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'one'} 
                 onAnimationStart={()=>play( {id: 'one'})}>
                     <img className="number-images" src={one_img} alt="number icon"/>
-                    {!toggleState ? <h3>{words.one.translation}</h3> : <h3>one</h3>}
+                    {!toggleState ? <h3>{words.one.translation}</h3> : <h3>{words.one.english}</h3>}
                 </div>
             </li>
             <li>
@@ -65,7 +99,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'two'} 
                 onAnimationStart={()=>play( {id: 'two'})}>
                     <img className="number-images" src={two_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.two.translation}</h3> : <h3>two</h3>}
+                    {!toggleState ? <h3>{words.two.translation}</h3> : <h3>{words.two.english}</h3>}
                 </div>
             
             </li>
@@ -74,7 +108,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'three'}
                 onAnimationStart={()=>play( {id: 'three'})}>
                     <img className="number-images" src={three_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.three.translation}</h3> : <h3>three</h3>}
+                    {!toggleState ? <h3>{words.three.translation}</h3> : <h3>{words.three.english}</h3>}
                 </div>
             </li>
             <li>
@@ -82,7 +116,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'four'}
                 onAnimationStart={()=>play( {id: 'four'})}>
                     <img className="number-images" src={four_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.four.translation}</h3> : <h3>four</h3>}
+                    {!toggleState ? <h3>{words.four.translation}</h3> : <h3>{words.four.english}</h3>}
                 </div>
             </li>
             <li>
@@ -90,7 +124,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'five'}
                 onAnimationStart={()=>play( {id: 'five'})}>
                     <img className="number-images" src={five_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.five.translation}</h3> : <h3>five</h3>}
+                    {!toggleState ? <h3>{words.five.translation}</h3> : <h3>{words.five.english}</h3>}
                 </div>
             </li>
             <li>
@@ -98,7 +132,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'six'}
                 onAnimationStart={()=>play( {id: 'six'})}>
                     <img className="number-images" src={six_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.six.translation}</h3> : <h3>six</h3>}
+                    {!toggleState ? <h3>{words.six.translation}</h3> : <h3>{words.six.english}</h3>}
                 </div>
             </li>
             <li>
@@ -106,7 +140,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'seven'}
                 onAnimationStart={()=>play( {id: 'seven'})}>
                     <img className="number-images" src={seven_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.seven.translation}</h3> : <h3>seven</h3>}
+                    {!toggleState ? <h3>{words.seven.translation}</h3> : <h3>{words.seven.english}</h3>}
                 </div>
             </li>
             <li>
@@ -114,7 +148,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'eight'}
                 onAnimationStart={()=>play( {id: 'eight'})}>
                     <img className="number-images" src={eight_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.eight.translation}</h3> : <h3>eight</h3>}
+                    {!toggleState ? <h3>{words.eight.translation}</h3> : <h3>{words.eight.english}</h3>}
                 </div>
             </li>
             <li>
@@ -122,7 +156,7 @@ const LessonStyleOne = ({words}) => {
                 className={ toggleState? 'number-item' : 'nine'}
                 onAnimationStart={()=>play( {id: 'nine'})}>
                     <img className="number-images" src={nine_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.nine.translation}</h3> : <h3>nine</h3>}
+                    {!toggleState ? <h3>{words.nine.translation}</h3> : <h3>{words.nine.english}</h3>}
                 </div>
             </li>
             <li>
@@ -132,7 +166,7 @@ const LessonStyleOne = ({words}) => {
                 onAnimationEnd={toggle}>
                     <img className="number-images" src={one_img} alt="number icon"></img>
                     <img className="number-images" src={zero_img} alt="number icon"></img>
-                    {!toggleState ? <h3>{words.ten.translation}</h3> : <h3>ten</h3>}
+                    {!toggleState ? <h3>{words.ten.translation}</h3> : <h3>{words.ten.english}</h3>}
                 </div>
             </li>
 

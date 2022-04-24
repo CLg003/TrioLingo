@@ -15,7 +15,7 @@ export const words_data = {
 
         fish: { 
             english: "fish",
-            translation: "pescado",
+            translation: "pez",
             img: "src/images/animals/icons8-flounder-fish-96.png"
         },
         duck: {
