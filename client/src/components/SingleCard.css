@@ -4,6 +4,54 @@
 }
 
 button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px;
+    border-radius:6px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size:  1em;
+    font-weight: bold;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background:
+    linear-gradient(115deg,
+    #4fcf70, #fad648,
+    #a767e5, #12bcfe,
+    #44ce7b);
+    background-size: 50% 100%;
+    border-radius: inherit;
+}
+
+button:hover::before {
+    animation: animate_border
+    .85s linear infinite;
+}
+
+button p {
+    display: block;
+    /* background: black; */
+    padding: 13px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes animate_border {
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* button {
     background: greenyellow;
     border: 2px solid purple;
     padding: 6px 12px;
@@ -17,7 +65,7 @@ button {
 button:hover {
     background: #c23866;
     color: #fff;
-}
+} */
 
 .card {
     position: relative;
