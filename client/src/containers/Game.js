@@ -4,11 +4,18 @@ import SingleCard from "../components/SingleCard";
 
 const cardImages = [
     {"src": "/images/animals/icons8-kawaii-dinosaur-96.png" , matched: false , name: "dinosaurio"},
+    {"src": "/images/animals/dinosaurio.png" , matched: false , name: "dinosaurio"},
     {"src": "/images/animals/icons8-penguin-96.png" , matched: false , name: "pinguino"},
+    {"src": "/images/animals/pinguino.png" , matched: false , name: "pinguino"},
     {"src": "/images/colours/icons8-fill-color-96PURPLE.png" , matched: false , name: "morado"},
+    {"src": "/images/colours/moradop.png" , matched: false , name: "morado"},
+    {"src": "/images/colours/verdep.png" , matched: false , name: "verde"},
     {"src": "/images/colours/icons8-fill-color-96GREEN.png" , matched: false , name: "verde"},
     {"src": "/images/numbers/004-4.png" , matched: false , name: "cuatro"},
+    {"src": "/images/numbers/004-4p.png" , matched: false , name: "cuatro"},
     {"src": "/images/numbers/008-8.png" , matched: false , name: "ocho"},
+    {"src": "/images/numbers/008-8p.png" , matched: false , name: "ocho"}
+
 ]
 
 
