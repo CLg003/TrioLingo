@@ -1,5 +1,5 @@
 .Game {
-    max-width : 1099px;
+    max-width : 1000px;
     margin: 40px auto;
 }
 
@@ -24,17 +24,17 @@ button:hover {
 }
 
 .card img {
-    width: 99%;
+    width: 100%;
     display: block;
     border: 2px solid greenyellow;
     border-radius: 6px;
 }
 
 .card-grid {
-    margin-top: 40px;
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
 }
 
 .card .front {
