@@ -5,44 +5,44 @@ export const words_data = {
         dog: {
             english: "dog",
             translation: "perro",
-            img: "../src/images/animals/icons8-fat-dog-96.png"
+            img: "/assets/images/animals/icons8-fat-dog-96.png"
         },
         cat: {
             english: "cat",
             translation: "gato",
-            img: "src/images/animals/icons8-cat-96.png"
+            img: "assets/images/animals/icons8-cat-96.png"
         },
 
         fish: { 
             english: "fish",
             translation: "pescado",
-            img: "src/images/animals/icons8-flounder-fish-96.png"
+            img: "assets/images/animals/icons8-flounder-fish-96.png"
         },
         duck: {
             english: "duck",
             translation: "pato",
-            img: "src/images/animals/icons8-rubber-duck-96.png"
+            img: "assets/images/animals/icons8-rubber-duck-96.png"
         },
 
         penguin: { 
             english: "penguin",
             translation: "pinguino",
-            img: "src/images/animals/icons8-penguin-96.png"
+            img: "assets/images/animals/icons8-penguin-96.png"
         },
         dinosaur: {
             english: "dinosaur",
             translation: "dinosaurio",
-            img: "src/images/animals/icons8-kawaii-dinosaur-96.png"
+            img: "assets/images/animals/icons8-kawaii-dinosaur-96.png"
         },
         pig: {
             english: "pig",
             translation: "cerdo",
-            img: "src/images/animals/icons8-money-box-96.png"
+            img: "assets/images/animals/icons8-money-box-96.png"
         },
         frog: {
             english: "frog",
             translation: "rana",
-            img: "src/images/animals/icons8-frog-96.png"
+            img: "assets/images/animals/icons8-frog-96.png"
         }
     },
     colours: {

@@ -1,5 +1,6 @@
 import {useState} from "react";
 import React from "react";
+import './lessonstylethree.css';
 
 
 const LessonStyleThree = ({words}) => {
@@ -17,10 +18,12 @@ const LessonStyleThree = ({words}) => {
     return (
         <>
         <h2>Animals Lesson</h2>
+        
         <p>The <span onMouseEnter={() => setShowDogContent(true)}
                      onMouseLeave={() => setShowDogContent(false)}>
                        {showDogContent ? (words.dog.english) : (words.dog.translation)}
-                     </span> chases a ball
+                </span> chases a ball
+                <img src={`${process.env.PUBLIC_URL}${words.dog.img}`}/>
         </p>
         
         <p>The <span
@@ -28,13 +31,15 @@ const LessonStyleThree = ({words}) => {
                     onMouseLeave={() => setShowCatContent(false)}>
                       {showCatContent ? (words.cat.english) : (words.cat.translation)}
                 </span> is asleep
+                <img src={`${process.env.PUBLIC_URL}${words.cat.img}`}/>
         </p>
-        
+
         <p>The <span
                     onMouseEnter={() => setShowFishContent(true)}
                     onMouseLeave={() => setShowFishContent(false)}>
                       {showFishContent ? (words.fish.english) : (words.fish.translation)}
                 </span> swims in the sea
+                <img src={`${process.env.PUBLIC_URL}${words.fish.img}`}/>
         </p>
         
         <p>The <span
@@ -42,6 +47,7 @@ const LessonStyleThree = ({words}) => {
                     onMouseLeave={() => setShowDuckContent(false)}>
                       {showDuckContent ? (words.duck.english) : (words.duck.translation)}
                 </span> swims on the pond
+                <img src={`${process.env.PUBLIC_URL}${words.duck.img}`}/>
         </p>
         
         <p>The <span
@@ -49,6 +55,7 @@ const LessonStyleThree = ({words}) => {
                     onMouseLeave={() => setShowPenguinContent(false)}>
                       {showPenguinContent ? (words.penguin.english) : (words.penguin.translation)}
                 </span> is eating fish
+                <img src={`${process.env.PUBLIC_URL}${words.penguin.img}`}/>
         </p>
         
         <p>The <span
@@ -56,6 +63,7 @@ const LessonStyleThree = ({words}) => {
                     onMouseLeave={() => setShowDinoContent(false)}>
                       {showDinoContent ? (words.dinosaur.english) : (words.dinosaur.translation)}
                 </span> is frightening
+                <img src={`${process.env.PUBLIC_URL}${words.dinosaur.img}`}/>
         </p>
         
         <p>The <span
@@ -63,14 +71,15 @@ const LessonStyleThree = ({words}) => {
                     onMouseLeave={() => setShowPigContent(false)}>
                       {showPigContent ? (words.pig.english) : (words.pig.translation)}
                 </span> lives on the farm
+                <img src={`${process.env.PUBLIC_URL}${words.pig.img}`}/>
         </p>
-        
         
         <p>The <span
                     onMouseEnter={() => setShowFrogContent(true)}
                     onMouseLeave={() => setShowFrogContent(false)}>
                       {showFrogContent ? (words.frog.english) : (words.frog.translation)}
                 </span> goes "Croak"
+                <img src={`${process.env.PUBLIC_URL}${words.frog.img}`}/>
         </p>
         </>
 
