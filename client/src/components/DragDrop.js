@@ -8,7 +8,7 @@ import './DragDrop.css';
 
 const DragDrop = ({words}) => {
 
-    const [showQuiz, setShowQuiz] = useState(true); // SHOULD DEFAULT TO FALSE
+    const [showQuiz, setShowQuiz] = useState(false); // SHOULD DEFAULT TO FALSE
     const [resetBoard, setResetBoard] = useState(true); // SHOULD DEFAULT TO TRUE
 
     // NEED AN ARRAY OF THE COLOURS FOR DnD
