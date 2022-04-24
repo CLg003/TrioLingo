@@ -46,18 +46,7 @@ const LessonStyleOne = ({words}) => {
 
 // writing usesound hook for animals (to be moved after merge)
 
-    // const [play] = useSound(animalsSound, {
-    //     sprite: {
-    //         dog: [1000, 2000],
-    //         cat: [2800, 2000],
-    //         fish: [5000, 1500],
-    //         duck: [7500, 2000],
-    //         penguin: [9500, 2000],
-    //         dinosaur: [11700, 2000],
-    //         pig: [14000, 1500],
-    //         frog: [16000, 1500]
-    //     }
-    // });
+
 
 // writing useSound hook for the colours (to be moved after merge)
 
