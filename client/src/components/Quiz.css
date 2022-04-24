@@ -1,0 +1,14 @@
+.question-div {
+    display: flex;
+}
+
+.question-div > img {
+    height: 150px;
+}
+
+.question-number {
+    font-weight: bold;
+}
+
+.question {
+}
