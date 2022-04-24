@@ -17,16 +17,11 @@ const LessonStyleThree = ({words}) => {
     return (
         <>
         <h2>Animals Lesson</h2>
-        <p>The <span 
-                    onMouseEnter={() => setShowDogContent(true)}
-                    onMouseLeave={() => setShowDogContent(false)}>
-                    {words.dog.translation}  
-                </span> chases a ball</p>
-        {showDogContent && (
-        <div>
-          {words.dog.english}
-        </div>
-      )}
+        <p>The <span onMouseEnter={() => setShowDogContent(true)}
+                     onMouseLeave={() => setShowDogContent(false)}>
+                       {showDogContent ? (words.dog.english) : (words.dog.translation)}
+                     </span> chases a ball
+        </p>
         
         <p>The <span
                     onMouseEnter={() => setShowCatContent(true)}
