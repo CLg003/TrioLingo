@@ -7,7 +7,7 @@ import {words_data} from './words_data.js';
 
 function App() {
   const [words, setWords] = useState(words_data);
-  const [lessonsCompleted, setLessonsCompleted] = useState(2);
+  const [lessonsCompleted, setLessonsCompleted] = useState(1);
 
 
 

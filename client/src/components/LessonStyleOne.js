@@ -44,25 +44,10 @@ const LessonStyleOne = ({words}) => {
         }
 })
 
-// writing usesound hook for animals (to be moved after merge)
-
-
 
 // writing useSound hook for the colours (to be moved after merge)
 
-    // const [play] = useSound(coloursSound, {
-    //     sprite: {
-    //         red: [0, 1500],
-    //         green: [2500, 2000],
-    //         yellow: [4000, 2000],
-    //         orange: [6500, 2000],
-    //         brown: [8500, 2000],
-    //         blue: [10000, 2000],
-    //         white: [12500, 2000],
-    //         black: [14500, 2000],
-    //         purple: [16500, 2000]
-    //     }
-    // })
+
 
     if (!showLesson ) {
         return (

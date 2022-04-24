@@ -3,6 +3,7 @@ import React from "react";
 import { useDrop } from 'react-dnd';
 import Colour from './Colour';
 
+
 const DropZone = ({type, name, spanish, colourList, resetBoard, boardHasItems}) => {
 
     // DESTINATION(S) FOR INDIVIDUAL DRAGGED ITEMS
@@ -10,6 +11,8 @@ const DropZone = ({type, name, spanish, colourList, resetBoard, boardHasItems}) 
 
     useEffect(() => {boardHasItems()}, [typeBoard]);
     useEffect(() => {setTypeBoard([])}, [resetBoard]);
+
+
 
     // DROPZONE MONITORING
     const [{isOver}, drop] = useDrop(() => ({

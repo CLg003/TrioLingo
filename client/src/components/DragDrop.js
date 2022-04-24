@@ -50,6 +50,7 @@ const DragDrop = ({words}) => {
                         <h4>Instructions: </h4>
                         <p>Can you match the paints to the Spanish colours? Click and drag each paint can to the word that you think matches!</p>
                     </div>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/><span>Click on the paint cans to hear the words!</span>
                     <div id="paints-and-board">
                         <div className="dnd-colours">
                             {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
