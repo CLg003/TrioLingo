@@ -49,47 +49,47 @@ export const words_data = {
         red: {
             english: "red",
             translation: "rojo",
-            img: "../images/colours/icons8-fill-color-96RED.png"
+            img: "/assets/images/colours/icons8-fill-color-96RED.png"
         },
         green: {
             english: "green",
             translation: "verde",
-            img: "../images/colours/icons8-fill-color-96GREEN.png"
+            img: "/assets/images/colours/icons8-fill-color-96GREEN.png"
         },
         yellow: {
             english: "yellow",
             translation: "amarillo",
-            img: "../images/colours/icons8-fill-color-96YELLOW.png"
+            img: "/assets/images/colours/icons8-fill-color-96YELLOW.png"
         },
         orange: {
             english: "orange",
             translation: "naranja",
-            img: "../images/colours/icons8-fill-color-96ORANGE.png"
+            img: "/assets/images/colours/icons8-fill-color-96ORANGE.png"
         },
         brown: {
             english: "brown",
             translation: "marron",
-            img: "../images/colours/icons8-fill-color-96BROWN.png"
+            img: "/assets/images/colours/icons8-fill-color-96BROWN.png"
         },
         blue: {
             english: "blue",
             translation: "azul",
-            img: "../images/colours/icons8-fill-color-96BLUE.png"
+            img: "/assets/images/colours/icons8-fill-color-96BLUE.png"
         },
         white: {
             english: "white",
             translation: "blanco",
-            img: "../images/colours/icons8-fill-color-96WHITE.png"
+            img: "/assets/images/colours/icons8-fill-color-96WHITE.png"
         },
         black: {
             english: "black",
             translation: "negro",
-            img: "../images/colours/icons8-fill-color-96BLACK.png"
+            img: "/assets/images/colours/icons8-fill-color-96BLACK.png"
         },
         purple: {
             english: "purple",
             translation: "morado",
-            img: "../images/colours/icons8-fill-color-96PURPLE.png"
+            img: "/assets/images/colours/icons8-fill-color-96PURPLE.png"
         },
     },
     numbers: {

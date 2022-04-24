@@ -39,7 +39,7 @@ const DragDrop = ({words}) => {
 
     if (showQuiz) {
         return (
-            <Quiz />
+            <Quiz wordList={colourList}/>
         );
     } else if (!showQuiz) {
         return (

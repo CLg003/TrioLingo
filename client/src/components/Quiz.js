@@ -1,8 +1,29 @@
 import React from 'react';
 import './Quiz.css';
 
-const Quiz = () => {
+const Quiz = ({wordList}) => {
 
+    const copyWordList = [...wordList]
+
+    const questionOneWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
+    console.log(questionOneWord);
+    copyWordList.splice((copyWordList.indexOf(questionOneWord)), 1);
+
+    const questionTwoWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
+    console.log(questionTwoWord);
+    copyWordList.splice((copyWordList.indexOf(questionTwoWord)), 1);
+
+    const questionThreeWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
+    console.log(questionThreeWord);
+    copyWordList.splice((copyWordList.indexOf(questionThreeWord)), 1);
+
+    const questionFourWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
+    console.log(questionFourWord);
+    copyWordList.splice((copyWordList.indexOf(questionFourWord)), 1);
+
+    const questionFiveWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
+    console.log(questionFiveWord);
+    copyWordList.splice((copyWordList.indexOf(questionFiveWord)), 1);
 
     return (
         <div id="quiz">
@@ -10,7 +31,7 @@ const Quiz = () => {
             <p>Have fun with this little quiz to test your Spanish!</p>
             <form>
                 <div className="question-div q1-div">
-                    <img src={"https://media.istockphoto.com/vectors/bunch-of-balloons-in-cartoon-flat-style-isolated-on-white-background-vector-id666620128?k=20&m=666620128&s=612x612&w=0&h=9JjxzlWqu-1Ry0KUuQtARTAlvdR2ZmCzLQI2ptWiXfw="}/>
+                    <img src={`${process.env.PUBLIC_URL}${questionOneWord.img}`}/>
                     <div className="question-text">
                         <p className="question-number">Question 1</p>
                         <p className="question">What is the Spanish word for {}?</p>
@@ -23,7 +44,7 @@ const Quiz = () => {
                     </div>
                 </div>
                 <div className="question-div q2-div">
-                    <img src={"https://media.istockphoto.com/vectors/bunch-of-balloons-in-cartoon-flat-style-isolated-on-white-background-vector-id666620128?k=20&m=666620128&s=612x612&w=0&h=9JjxzlWqu-1Ry0KUuQtARTAlvdR2ZmCzLQI2ptWiXfw="}/>
+                    <img src={`${process.env.PUBLIC_URL}${questionTwoWord.img}`}/>
                     <div className="question-text">
                         <p className="question-number">Question 2</p>
                         <p className="question">What is the English word for {}?</p>
@@ -36,7 +57,7 @@ const Quiz = () => {
                     </div>
                 </div>
                 <div className="question-div q3-div">
-                    <img src={"https://media.istockphoto.com/vectors/bunch-of-balloons-in-cartoon-flat-style-isolated-on-white-background-vector-id666620128?k=20&m=666620128&s=612x612&w=0&h=9JjxzlWqu-1Ry0KUuQtARTAlvdR2ZmCzLQI2ptWiXfw="}/>
+                    <img src={`${process.env.PUBLIC_URL}${questionThreeWord.img}`}/>
                     <div className="question-text">
                         <p className="question-number">Question 3</p>
                         <p className="question">What is the Spanish word for {}?</p>
@@ -49,7 +70,7 @@ const Quiz = () => {
                     </div>
                 </div>
                 <div className="question-div q4-div">
-                    <img src={"https://media.istockphoto.com/vectors/bunch-of-balloons-in-cartoon-flat-style-isolated-on-white-background-vector-id666620128?k=20&m=666620128&s=612x612&w=0&h=9JjxzlWqu-1Ry0KUuQtARTAlvdR2ZmCzLQI2ptWiXfw="}/>
+                    <img src={`${process.env.PUBLIC_URL}${questionFourWord.img}`}/>
                     <div className="question-text">
                         <p className="question-number">Question 4</p>
                         <p className="question">What is the English word for {}?</p>
@@ -62,7 +83,7 @@ const Quiz = () => {
                     </div>
                 </div>
                 <div className="question-div q5-div">
-                    <img src={"https://media.istockphoto.com/vectors/bunch-of-balloons-in-cartoon-flat-style-isolated-on-white-background-vector-id666620128?k=20&m=666620128&s=612x612&w=0&h=9JjxzlWqu-1Ry0KUuQtARTAlvdR2ZmCzLQI2ptWiXfw="}/>
+                    <img src={`${process.env.PUBLIC_URL}${questionFiveWord.img}`}/>
                     <div className="question-text">
                         <p className="question-number">Question 5</p>
                         <p className="question">What is the Spanish word for {}?</p>
