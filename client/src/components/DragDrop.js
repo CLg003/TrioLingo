@@ -1,22 +1,19 @@
-import React from "react";
+import { useState } from 'react';
+import React from 'react';
 import Colour from './Colour';
 import DropZone from './DropZone';
+import Quiz from './Quiz';
 import './DragDrop.css';
 
 
 const DragDrop = ({words}) => {
+
+    const [showQuiz, setShowQuiz] = useState(false); // SHOULD DEFAULT TO FALSE
+    const [resetBoard, setResetBoard] = useState(true); // SHOULD DEFAULT TO TRUE
+
     // NEED AN ARRAY OF THE COLOURS FOR DnD
     const colourList = [words.black, words.blue, words.brown, words.green, words.orange, words.purple, words.red, words.white, words.yellow];
-    // ADDING COLOUR NAME (ENGLISH) PROPERTY
-    colourList[0]['english'] = "black";
-    colourList[1]['english'] = "blue";
-    colourList[2]['english'] = "brown";
-    colourList[3]['english'] = "green";
-    colourList[4]['english'] = "orange";
-    colourList[5]['english'] = "purple";
-    colourList[6]['english'] = "red";
-    colourList[7]['english'] = "white";
-    colourList[8]['english'] = "yellow";
+
     // ADDING ID PROPERTY (WON'T BE NEEDED ONCE DB UP AND RUNNING)
     colourList[0]['id'] = 0;
     colourList[1]['id'] = 1;
@@ -27,39 +24,50 @@ const DragDrop = ({words}) => {
     colourList[6]['id'] = 6;
     colourList[7]['id'] = 7;
     colourList[8]['id'] = 8;
-    // ADDING IMG PROPERTY (WON'T BE NEEDED ONCE IMAGES UPLOADED)
-    colourList[0]['img'] = '../images/colours/black.png';
-    colourList[1]['img'] = '../images/colours/blue.png';
-    colourList[2]['img'] = '../images/colours/brown.png';
-    colourList[3]['img'] = '../images/colours/green.png';
-    colourList[5]['img'] = '../images/colours/orange.png';
-    colourList[4]['img'] = '../images/colours/purple.png';
-    colourList[6]['img'] = '../images/colours/red.png';
-    colourList[7]['img'] = '../images/colours/white.png';
-    colourList[8]['img'] = '../images/colours/yellow.png';
 
-    // console.log(colourList);
+    const handleQuizClick = () => {
+        setShowQuiz(true);
+    }
 
-    // const dropZones = ["red", "orange", "yellow", "green", "blue", "purple", "black", "white", "brown"]
-    
-    // CODE TO SHUFFLE colourList:
-    // colourList.sort(function(a, b){return 0.5 - Math.random()});
+    const handleResetClick = () => {
+        setResetBoard(true);
+    }
 
-    return (
-        <div id="paints-and-board">
-            <div className="dnd-colours">
-                {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
-                    return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
-                })}
-            </div>
-            <div className="dnd-board">
-                {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
-                    return <DropZone key={colour.id} type={colour.english} name={colour.english} spanish={colour.translation} colourList={colourList} />
-                })}
-            </div>
-        </div>
-    );
-    
+    const boardHasItems = () => {
+        setResetBoard(false);
+    }
+
+    if (showQuiz) {
+        return (
+            <Quiz wordList={colourList}/>
+        );
+    } else if (!showQuiz) {
+        return (
+            <>
+                <div className="lesson-content">
+                    <p>You aced that numbers quiz, well done! Now that you've mastered your Spanish "uno, dos, tres", let's see how you get on with some colours... </p>
+                    <div id="instructions">
+                        <h4>Instructions: </h4>
+                        <p>Can you match the paints to the Spanish colours? Click and drag each paint can to the word that you think matches!</p>
+                    </div>
+                    <div id="paints-and-board">
+                        <div className="dnd-colours">
+                            {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
+                                return <Colour name={colour.english} img={colour.img} id={colour.id} key={colour.id} />
+                            })}
+                        </div>
+                        <div className="dnd-board">
+                            {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
+                                return <DropZone key={colour.id} type={colour.english} name={colour.english} spanish={colour.translation} colourList={colourList} resetBoard={resetBoard} boardHasItems={boardHasItems} />
+                            })}
+                        </div>
+                    </div>
+                    <p id="reset-drag-n-drop" onClick={handleResetClick}>Reset Board</p>
+                    <p id="take-the-quiz">Think you know your Spanish colours? <span onClick={handleQuizClick}>Take the quiz!</span></p>
+                </div>
+            </>
+        );
+    }
 }
 
 export default DragDrop;
