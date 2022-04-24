@@ -1,19 +1,40 @@
+.Game {
+    max-width : 1099px;
+    margin: 40px auto;
+}
+
+button {
+    background: greenyellow;
+    border: 2px solid purple;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #c23866;
+    color: #fff;
+}
+
 .card {
     position: relative;
 }
 
 .card img {
-    width: 40%;
+    width: 99%;
     display: block;
-    border: 2px solid #fff;
+    border: 2px solid greenyellow;
     border-radius: 6px;
 }
 
 .card-grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-gap: 10px;
 }
 
 .card .front {
@@ -22,6 +43,7 @@
     position: absolute;
     transition: all ease-in 0.2s;
 }
+
 
 .flipped .front {
     transform: rotateY(0deg);

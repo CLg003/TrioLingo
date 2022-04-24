@@ -15,7 +15,6 @@ const cardImages = [
     {"src": "/images/numbers/004-4p.png" , matched: false , name: "cuatro"},
     {"src": "/images/numbers/008-8.png" , matched: false , name: "ocho"},
     {"src": "/images/numbers/008-8p.png" , matched: false , name: "ocho"}
-
 ]
 
 
