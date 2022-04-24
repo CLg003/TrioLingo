@@ -8,7 +8,6 @@ import {words_data} from './words_data.js';
 function App() {
   const [words, setWords] = useState(words_data);
   const [lessonsCompleted, setLessonsCompleted] = useState(0);
-  //note I have changed this - should be useState(0)
 
 
 
