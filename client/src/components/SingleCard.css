@@ -7,7 +7,7 @@ button {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    padding: 3px;
+    padding: 3px 3px;
     border-radius:6px;
     position: relative;
     overflow: hidden;
@@ -34,12 +34,12 @@ button::before {
 
 button:hover::before {
     animation: animate_border
-    .85s linear infinite;
+    .75s linear infinite;
 }
 
 button p {
     display: block;
-    /* background: black; */
+    background-color: plum;
     padding: 13px 20px;
     border-radius: 3px;
     position: relative;
