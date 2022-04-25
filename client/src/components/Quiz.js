@@ -91,7 +91,9 @@ const handleSubmit = (event) => {
 // Shuffle Function required for refactor
 
 const shuffle = (wordList) => {
-    let currentId = wordList.length;
+
+    let currentId = [wordList.length];
+    
 
     while (currentId !== 0) {
         let randomId = Math.floor(Math.random()* currentId);
@@ -106,7 +108,7 @@ const shuffle = (wordList) => {
 
 // Refactor of quiz logic
 
-const quizQuestions = () => {
+const quizQuestions = (wordList) => {
 
     let quizList = shuffle(wordList);
 
@@ -148,7 +150,7 @@ const quizQuestions = () => {
             <p>Have fun with this little quiz to test your Spanish!</p>
             <form onSubmit={handleSubmit}>
 
-            {quizQuestions()}
+            {quizQuestions(wordList)}
 
             <input type="submit" >
 
