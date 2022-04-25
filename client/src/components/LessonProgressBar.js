@@ -7,7 +7,7 @@ const LessonProgressBar = ({lessonsCompleted}) => {
     return (
         <>
         <ProgressBar 
-            percent={25}
+            percent={75}
             hasStepZero={false}
             filledBackground="linear-gradient(to right, #992dd9 , #2bcf18)"
             width={800}
@@ -16,7 +16,6 @@ const LessonProgressBar = ({lessonsCompleted}) => {
             <Step>
                 {( {accomplished}) => (
                     <>
-                    <p>Lesson One</p>
                     <img
                     style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                     width="60"
@@ -28,7 +27,6 @@ const LessonProgressBar = ({lessonsCompleted}) => {
             <Step>
                 {( {accomplished}) => (
                     <>
-                    <p>Lesson Two</p>
                     <img 
                     style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                     width="60"
@@ -39,7 +37,6 @@ const LessonProgressBar = ({lessonsCompleted}) => {
             <Step>
                 {( {accomplished}) => (
                     <>
-                    <p>Lesson Three</p>
                     <img 
                     style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                     width="60"
