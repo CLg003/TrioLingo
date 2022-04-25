@@ -4,7 +4,7 @@ const Answer = ({answer}) => {
 
     return (
         <>
-        {answer === "wrong" ? <p>wrong</p> : <p>correctx</p>}
+        {answer === "wrong" ? <p>wrong</p> : <p>correct</p>}
         </>
     );
 

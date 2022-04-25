@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import Answer from './Answer';
 import LessonProgressonContext from '../context/LessonProgressionContext';
 import Confetti from 'react-confetti';
-import ReactModal from 'react-modal';
+import ReactModal, { contextType } from 'react-modal';
 import { useToggle } from '../hooks';
 
 
@@ -57,6 +57,8 @@ const QuizForm = ({
         }
     }
 
+    // const confettiImage = require(`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`)
+
     return (
         <div id="quiz">
 
@@ -68,6 +70,12 @@ const QuizForm = ({
                 gravity={0.05}
                 tweenDuration={0.001}
                 initialVelocityX={10}
+                // drawShape={ctx => {
+                //     ctx.beginPath()
+                //     drawImage(confettiImage, 10, 10)
+                //     ctx.stroke()
+                //     ctx.closePath()
+                //     }
                 />
             : null}
 
