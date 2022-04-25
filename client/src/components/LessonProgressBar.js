@@ -4,10 +4,13 @@ import { ProgressBar, Step } from "react-step-progress-bar";
 
 const LessonProgressBar = ({lessonsCompleted}) => {
 
+    const percentage = (lessonsCompleted > 0 ? lessonsCompleted/3*100 : 0);
+  
+
     return (
         <>
         <ProgressBar 
-            percent={75}
+            percent={percentage}
             hasStepZero={false}
             filledBackground="linear-gradient(to right, #992dd9 , #2bcf18)"
             width={800}

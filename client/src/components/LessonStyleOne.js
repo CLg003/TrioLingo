@@ -24,7 +24,7 @@ const LessonStyleOne = ({words}) => {
 
     //array for quiz
 
-    const numberWords = [words.zero, words.one, words.two, words.three, words.four, words.five, words.six, words.seven, words.eight, words.nine, words.ten ]
+    const numberWords = [words.zero, words.one, words.two, words.three, words.four, words.five, words.six, words.seven, words.eight, words.nine]
     
 
     const [play] = useSound(numbersSound, {
