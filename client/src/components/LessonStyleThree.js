@@ -36,7 +36,7 @@ const LessonStyleThree = ({words}) => {
 
 const animalList = [words.dog, words.cat, words.fish, words.duck, words.penguin, words.dinosaur, words.pig, words.frog]
 
-if (showLesson) {
+if (!showLesson) { // need to remove ! operator - using for writing quiz component 
 
     return (
         <>
