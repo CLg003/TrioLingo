@@ -1,11 +1,9 @@
 const baseURL = 'http://localhost:9000/api/words/'
 
-const WordsService = {
-    getWords() {
+export const getWords = () => {
         return fetch(baseURL)
         .then(res => res.json())
-    },
+    }
     
-}
 
-export default WordsService;
+// export default WordsService;

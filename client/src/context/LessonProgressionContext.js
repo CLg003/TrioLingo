@@ -1,5 +1,5 @@
 import React, {createContext} from 'react';
 
-const LessonProgressonContext = createContext();
+const LessonProgressionContext = createContext();
 
-export default LessonProgressonContext;
+export default LessonProgressionContext;
