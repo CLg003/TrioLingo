@@ -55,7 +55,6 @@ const QuizForm = ({
         <div id="quiz">
 
             {quizPassed ? 
-            <div id="congratulations">
                 <Confetti 
                 height={1500}
                 // width={1000}
@@ -64,10 +63,6 @@ const QuizForm = ({
                 tweenDuration={0.001}
                 initialVelocityX={10}
                 />
-                {/* <div id="congratulations-message">
-                    <h2>Well done!</h2>
-                </div> */}
-            </div>
             : null}
             
             <h3 id="topic-heading">Quiz</h3>

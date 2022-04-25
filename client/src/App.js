@@ -9,7 +9,7 @@ import LessonProgressonContext from './context/LessonProgressionContext';
 
 function App() {
   const [words, setWords] = useState(words_data);
-  const [lessonsCompleted, setLessonsCompleted] = useState(0);
+  const [lessonsCompleted, setLessonsCompleted] = useState(1);
 
   const lessonProgression = () => {
     setLessonsCompleted(lessonsCompleted + 1);
@@ -18,13 +18,13 @@ function App() {
 
   return (
     <div className="App">
-    <LessonProgressBar lessonsCompleted={lessonsCompleted}/>
       <h1>Trash Panda at your service</h1>
       <LessonProgressonContext.Provider value={{lessonProgression}}>
         {lessonsCompleted < 3 ?
         <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
         : <Game words={words}/> } 
       </LessonProgressonContext.Provider>
+      <LessonProgressBar lessonsCompleted={lessonsCompleted}/>
     </div>
   );
 }
