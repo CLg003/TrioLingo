@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Answer from './Answer';
 
 const QuizForm = ({
     questionOneWord, q1WrongA, q1WrongB,
@@ -13,7 +14,7 @@ const QuizForm = ({
     const[questionFourAnswer , setQuestionFourAnswer] = useState('');
     const[questionFiveAnswer , setQuestionFiveAnswer] = useState('');
 
-    const[formSubmit, setFormSubmit] = useState()
+    const[formSubmit, setFormSubmit] = useState(false);
 
     const handleChangeQ1 = (event) => {
         setQuestionOneAnswer(event.target.value)
@@ -34,6 +35,7 @@ const QuizForm = ({
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(event);
+        setFormSubmit(true);
     }
 
     return (
@@ -61,6 +63,7 @@ const QuizForm = ({
                         <label htmlFor="option-3">{questionOneWord.translation}</label>
                         <input type="radio" id="option-3" name="question-1" value={questionOneWord.translation} onChange={handleChangeQ1}/>
                     </div>
+                    {formSubmit? <Answer answer={questionOneAnswer}/> : null }
                 </div>
 
                 {/* QUESTION 2 */}
@@ -82,6 +85,7 @@ const QuizForm = ({
                         <label htmlFor="option-3">{q2WrongB.english}</label>
                         <input type="radio" id="option-3" name="question-2" value="wrong" onChange={handleChangeQ2}/>
                     </div>
+                    {formSubmit? <Answer answer={questionTwoAnswer}/> : null }
                 </div>
 
                 {/* QUESTION 3 */}
@@ -103,6 +107,7 @@ const QuizForm = ({
                         <label htmlFor="option-3">{questionThreeWord.translation} </label>
                         <input type="radio" id="option-3" name="question-3" value={questionThreeWord.translation} onChange={handleChangeQ3}/>
                     </div>
+                    {formSubmit? <Answer answer={questionThreeAnswer}/> : null }
                 </div>
 
                 {/* QUESTION 4 */}
@@ -126,6 +131,7 @@ const QuizForm = ({
                         </label>
                         <input type="radio" id="option-3" name="question-4" value="wrong" onChange={handleChangeQ4}/>
                     </div>
+                    {formSubmit? <Answer answer={questionFourAnswer}/> : null }
                 </div>
 
                 {/* QUESTION 5 */}
@@ -147,6 +153,7 @@ const QuizForm = ({
                         <label htmlFor="option-3">{q5WrongB.english}</label>
                         <input type="radio" id="option-3" name="question-5" value="wrong" onChange={handleChangeQ5}/>
                     </div>
+                    {formSubmit? <Answer answer={questionFiveAnswer}/> : null }
                 </div>
                 <input type="submit" >
 
