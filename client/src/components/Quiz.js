@@ -1,4 +1,4 @@
-import React  , { useState } from 'react';
+import React  , { useState, useEffect } from 'react';
 import './Quiz.css';
 
 
@@ -103,15 +103,15 @@ const handleSubmit = (event) => {
 
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-1">{q1WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-1" value="wrong"/>
+                        <input type="radio" id="option-1" name="question-1" value="wrong" onChange={handleChangeQ1}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-2">{q1WrongB.translation}</label>
-                        <input type="radio" id="option-2" name="question-1" value="wrong"/>
+                        <input type="radio" id="option-2" name="question-1" value="wrong" onChange={handleChangeQ1}/>
                         
                         {/* CORRECT ANSWER */}
                         <label htmlFor="option-3">{questionOneWord.translation}</label>
-                        <input type="radio" id="option-3" name="question-1" value={questionOneWord.translation}/>
+                        <input type="radio" id="option-3" name="question-1" value={questionOneWord.translation} onChange={handleChangeQ1}/>
                     </div>
                 </div>
 
@@ -124,15 +124,15 @@ const handleSubmit = (event) => {
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-1">{q2WrongA.english}</label>
-                        <input type="radio" id="option-1" name="question-2" value="wrong"/>
+                        <input type="radio" id="option-1" name="question-2" value="wrong" onChange={handleChangeQ2}/>
                         
                         {/* CORRECT ANSWER */}
                         <label htmlFor="option-2">{questionTwoWord.english}</label>
-                        <input type="radio" id="option-2" name="question-2" value={questionTwoWord.english}/>
+                        <input type="radio" id="option-2" name="question-2" value={questionTwoWord.english} onChange={handleChangeQ2}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-3">{q2WrongB.english}</label>
-                        <input type="radio" id="option-3" name="question-2" value="wrong"/>
+                        <input type="radio" id="option-3" name="question-2" value="wrong" onChange={handleChangeQ2}/>
                     </div>
                 </div>
 
@@ -145,15 +145,15 @@ const handleSubmit = (event) => {
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-1">{q3WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-3" value="wrong"/>
+                        <input type="radio" id="option-1" name="question-3" value="wrong" onChange={handleChangeQ3}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-2">{q3WrongB.translation}</label>
-                        <input type="radio" id="option-2" name="question-3" value="wrong"/>
+                        <input type="radio" id="option-2" name="question-3" value="wrong" onChange={handleChangeQ3}/>
                         
                         {/* CORRECT ANSWER */}
                         <label htmlFor="option-3">{questionThreeWord.translation} </label>
-                        <input type="radio" id="option-3" name="question-3" value={questionThreeWord.translation}/>
+                        <input type="radio" id="option-3" name="question-3" value={questionThreeWord.translation} onChange={handleChangeQ3}/>
                     </div>
                 </div>
 
@@ -166,17 +166,17 @@ const handleSubmit = (event) => {
                         
                         {/* CORRECT ANSWER */}
                         <label htmlFor="option-1">{questionFourWord.english} </label>
-                        <input type="radio" id="option-1" name="question-4" value={questionFourWord.english}/>
+                        <input type="radio" id="option-1" name="question-4" value={questionFourWord.english} onChange={handleChangeQ4}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-2">{q4WrongA.english}</label>
-                        <input type="radio" id="option-2" name="question-4" value="wrong"/>
+                        <input type="radio" id="option-2" name="question-4" value="wrong" onChange={handleChangeQ4}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-3">
                             {q4WrongB.english} 
                         </label>
-                        <input type="radio" id="option-3" name="question-4" value="wrong"/>
+                        <input type="radio" id="option-3" name="question-4" value="wrong" onChange={handleChangeQ4}/>
                     </div>
                 </div>
 
@@ -189,25 +189,25 @@ const handleSubmit = (event) => {
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-1">{q5WrongA.english}</label>
-                        <input type="radio" id="option-1" name="question-5" value="wrong"/>
+                        <input type="radio" id="option-1" name="question-5" value="wrong" onChange={handleChangeQ5}/>
                         
                         {/* CORRECT ANSWER */}
                         <label htmlFor="option-2">{questionFiveWord.translation} </label>
-                        <input type="radio" id="option-2" name="question-5" value={questionFiveWord.translation}/>
+                        <input type="radio" id="option-2" name="question-5" value={questionFiveWord.translation} onChange={handleChangeQ5}/>
                         
                         {/* WRONG ANSWER */}
                         <label htmlFor="option-3">{q5WrongB.english}</label>
-                        <input type="radio" id="option-3" name="question-5" value="wrong"/>
+                        <input type="radio" id="option-3" name="question-5" value="wrong" onChange={handleChangeQ5}/>
                     </div>
                 </div>
                 <input type="submit" >
 
                 </input>
 
-                
-            </form>
-        </div>
-    );
+                    
+                </form>
+            </div>
+        );
 }
 
 export default Quiz;
