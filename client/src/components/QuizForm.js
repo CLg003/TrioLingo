@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import Answer from './Answer';
-import LessonProgressonContext from '../context/LessonProgressionContext';
+import LessonProgressionContext from '../context/LessonProgressionContext';
 import Confetti from 'react-confetti';
 import ReactModal, { contextType } from 'react-modal';
 import { useToggle } from '../hooks';
@@ -14,18 +14,18 @@ const QuizForm = ({
     questionFourWord, q4WrongA, q4WrongB,
     questionFiveWord, q5WrongA, q5WrongB}) => {
 
-    const[questionOneAnswer , setQuestionOneAnswer] = useState('');
-    const[questionTwoAnswer , setQuestionTwoAnswer] = useState('');
-    const[questionThreeAnswer , setQuestionThreeAnswer] = useState('');
-    const[questionFourAnswer , setQuestionFourAnswer] = useState('');
-    const[questionFiveAnswer , setQuestionFiveAnswer] = useState('');
+    const[questionOneAnswer , setQuestionOneAnswer] = useState('wrong');
+    const[questionTwoAnswer , setQuestionTwoAnswer] = useState('wrong');
+    const[questionThreeAnswer , setQuestionThreeAnswer] = useState('wrong');
+    const[questionFourAnswer , setQuestionFourAnswer] = useState('wrong');
+    const[questionFiveAnswer , setQuestionFiveAnswer] = useState('wrong');
 
     const[formSubmit, setFormSubmit] = useState(false);
     const [quizPassed, setQuizPassed] = useState(false);
 
     const [toggleState, toggle] = useToggle();
 
-    const {lessonProgression, lessonsCompleted} = useContext(LessonProgressonContext);
+    const {lessonProgression, lessonsCompleted} = useContext(LessonProgressionContext);
 
     const handleChangeQ1 = (event) => {
         setQuestionOneAnswer(event.target.value)
@@ -118,18 +118,18 @@ const QuizForm = ({
                     <img src={`${process.env.PUBLIC_URL}${questionTwoWord.img}`} alt="Quiz topic"/>
                     <div className="question-text">
                         <p className="question-number">Question 2</p>
-                        <p className="question">What is the English word for {questionTwoWord.translation}?</p>
+                        <p className="question">What is the Spanish word for {questionTwoWord.english}?</p>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q2WrongA.english}</label>
+                        <label htmlFor="option-1">{q2WrongA.translation}</label>
                         <input type="radio" id="option-1" name="question-2" value="wrong" onChange={handleChangeQ2}/>
                         
                         {/* CORRECT ANSWER */}
-                        <label htmlFor="option-2">{questionTwoWord.english}</label>
-                        <input type="radio" id="option-2" name="question-2" value={questionTwoWord.english} onChange={handleChangeQ2}/>
+                        <label htmlFor="option-2">{questionTwoWord.translation}</label>
+                        <input type="radio" id="option-2" name="question-2" value={questionTwoWord.translation} onChange={handleChangeQ2}/>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">{q2WrongB.english}</label>
+                        <label htmlFor="option-3">{q2WrongB.translation}</label>
                         <input type="radio" id="option-3" name="question-2" value="wrong" onChange={handleChangeQ2}/>
                     </div>
                     {formSubmit? <Answer answer={questionTwoAnswer}/> : null }
@@ -162,20 +162,18 @@ const QuizForm = ({
                     <img src={`${process.env.PUBLIC_URL}${questionFourWord.img}`} alt="Quiz topic"/>
                     <div className="question-text">
                         <p className="question-number">Question 4</p>
-                        <p className="question">What is the English word for {questionFourWord.translation}?</p>
+                        <p className="question">What is the Spanish word for {questionFourWord.english}?</p>
                         
                         {/* CORRECT ANSWER */}
-                        <label htmlFor="option-1">{questionFourWord.english} </label>
-                        <input type="radio" id="option-1" name="question-4" value={questionFourWord.english} onChange={handleChangeQ4}/>
+                        <label htmlFor="option-1">{questionFourWord.translation} </label>
+                        <input type="radio" id="option-1" name="question-4" value={questionFourWord.translation} onChange={handleChangeQ4}/>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-2">{q4WrongA.english}</label>
+                        <label htmlFor="option-2">{q4WrongA.translation}</label>
                         <input type="radio" id="option-2" name="question-4" value="wrong" onChange={handleChangeQ4}/>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">
-                            {q4WrongB.english} 
-                        </label>
+                        <label htmlFor="option-3">{q4WrongB.translation}</label>
                         <input type="radio" id="option-3" name="question-4" value="wrong" onChange={handleChangeQ4}/>
                     </div>
                     {formSubmit? <Answer answer={questionFourAnswer}/> : null }
@@ -189,7 +187,7 @@ const QuizForm = ({
                         <p className="question">What is the Spanish word for {questionFiveWord.english}?</p>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q5WrongA.english}</label>
+                        <label htmlFor="option-1">{q5WrongA.translation}</label>
                         <input type="radio" id="option-1" name="question-5" value="wrong" onChange={handleChangeQ5}/>
                         
                         {/* CORRECT ANSWER */}
@@ -197,7 +195,7 @@ const QuizForm = ({
                         <input type="radio" id="option-2" name="question-5" value={questionFiveWord.translation} onChange={handleChangeQ5}/>
                         
                         {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">{q5WrongB.english}</label>
+                        <label htmlFor="option-3">{q5WrongB.translation}</label>
                         <input type="radio" id="option-3" name="question-5" value="wrong" onChange={handleChangeQ5}/>
                     </div>
                     {formSubmit? <Answer answer={questionFiveAnswer}/> : null }
