@@ -28,12 +28,6 @@ function App() {
     })
   },[]);
 
-  
-
-  // const wordsArray = words.map(word => {
-  //   return word;
-  // })
-
   const lessonProgression = () => {
     setLessonsCompleted(lessonsCompleted + 1);
   }

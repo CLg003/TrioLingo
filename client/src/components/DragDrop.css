@@ -20,64 +20,77 @@
     margin-right: 10px;
 }
 
-#paints-and-board {
+.audio-instructions {
     display: flex;
-    flex-direction: row;
-    /* flex-flow: wrap row; */
     align-items: center;
 }
 
+.audio-icon {
+    height: 50px;
+    margin: 5px;
+}
+
+#paints-and-board {
+    /* display: flex;
+    flex-direction: row; */
+    /* flex-flow: wrap row; */
+    /* align-items: center; */
+}
+
 .dnd-colours {
-    width: 40%;
+    /* width: 40%; */
     max-height: 550px;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-flow: wrap row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .paint-cans {
-    flex-basis: 25%;
-    padding: 20px 10px;    
+    /* flex-basis: 25%; */
+    flex-basis: 15%;
+    padding: 10px 0;  
+    max-width: 100px;  
+    margin: 10px;
 }
 
 .dnd-board {
-    width: 45%;
+    /* width: 45%; */
     max-height: 550px;
     /* border: 2px solid black; */
     border-radius: 40px;
     margin: auto;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
+    justify-content: center;
     align-items: center;
     flex-flow: wrap row;
 }
 
 .dropzone {
     height: 100%;
-    max-height: 150px;
     width: 100%;
-    max-width: 150px;
-    flex-basis: 25%;
+    /* max-width: 150px; */
+    /* flex-basis: 25%; */
+    flex-basis: 10%;
     justify-content: space-evenly;
     text-align: center;
-    padding: 5px;
     /* border: 1px dashed purple; */
     /* border-radius: 30px;; */
-    margin: 10px;
 }
 
 #zone-to-fill {
     border: 1px dashed black;
     border-radius: 30px;
+    width: 100px;
+    height: 100%;
 }
 
 .dropzone > p {
     padding: 50px 0;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #dragged-colours {
