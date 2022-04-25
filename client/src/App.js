@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>Trash Panda at your service</h1>
-      <LessonProgressonContext.Provider value={{lessonProgression}}>
+      <LessonProgressonContext.Provider value={{lessonProgression, lessonsCompleted}}>
         {lessonsCompleted < 3 ?
         <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
         : <Game words={words}/> } 

@@ -2,6 +2,9 @@ import React, {useState, useContext} from 'react';
 import Answer from './Answer';
 import LessonProgressonContext from '../context/LessonProgressionContext';
 import Confetti from 'react-confetti';
+import ReactModal from 'react-modal';
+import { useToggle } from '../hooks';
+
 
 
 const QuizForm = ({
@@ -18,9 +21,11 @@ const QuizForm = ({
     const[questionFiveAnswer , setQuestionFiveAnswer] = useState('');
 
     const[formSubmit, setFormSubmit] = useState(false);
-    const [quizPassed, setQuizPassed] = useState(true);
+    const [quizPassed, setQuizPassed] = useState(false);
 
-    const {lessonProgression} = useContext(LessonProgressonContext);
+    const [toggleState, toggle] = useToggle();
+
+    const {lessonProgression, lessonsCompleted} = useContext(LessonProgressonContext);
 
     const handleChangeQ1 = (event) => {
         setQuestionOneAnswer(event.target.value)
@@ -48,6 +53,7 @@ const QuizForm = ({
         })
         if (!result.includes("wrong")) {
             setQuizPassed(true);
+            toggle();
         }
     }
 
@@ -64,6 +70,14 @@ const QuizForm = ({
                 initialVelocityX={10}
                 />
             : null}
+
+            <ReactModal
+            isOpen={!toggleState}
+            ariaHideApp={false}
+            contentLabel="Next Lesson"
+            >
+                <button onClick={() => lessonProgression()}>{ lessonsCompleted === 2 ? "Play a game!" : "Next Lesson"}</button>
+            </ReactModal>
             
             <h3 id="topic-heading">Quiz</h3>
             <p>Have fun with this little quiz to test your Spanish!</p>
