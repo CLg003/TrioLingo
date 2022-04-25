@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Answer from './Answer';
+import LessonProgressonContext from '../context/LessonProgressionContext';
+
 
 const QuizForm = ({
     questionOneWord, q1WrongA, q1WrongB,
@@ -15,6 +17,8 @@ const QuizForm = ({
     const[questionFiveAnswer , setQuestionFiveAnswer] = useState('');
 
     const[formSubmit, setFormSubmit] = useState(false);
+
+    const {lessonProgression} = useContext(LessonProgressonContext);
 
     const handleChangeQ1 = (event) => {
         setQuestionOneAnswer(event.target.value)
@@ -36,6 +40,13 @@ const QuizForm = ({
         event.preventDefault();
         console.log(event);
         setFormSubmit(true);
+        let answers = [questionOneAnswer, questionTwoAnswer, questionThreeAnswer, questionFourAnswer, questionFiveAnswer];
+        let result = answers.filter(answer => {
+            return answer === "wrong" 
+        })
+        if (!result.includes("wrong")) {
+            lessonProgression();
+        }
     }
 
     return (
