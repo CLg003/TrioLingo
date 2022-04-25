@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import Answer from './Answer';
 import LessonProgressonContext from '../context/LessonProgressionContext';
+import Confetti from 'react-confetti';
 
 
 const QuizForm = ({
@@ -17,6 +18,7 @@ const QuizForm = ({
     const[questionFiveAnswer , setQuestionFiveAnswer] = useState('');
 
     const[formSubmit, setFormSubmit] = useState(false);
+    const [quizPassed, setQuizPassed] = useState(true);
 
     const {lessonProgression} = useContext(LessonProgressonContext);
 
@@ -45,12 +47,29 @@ const QuizForm = ({
             return answer === "wrong" 
         })
         if (!result.includes("wrong")) {
-            lessonProgression();
+            setQuizPassed(true);
         }
     }
 
     return (
         <div id="quiz">
+
+            {quizPassed ? 
+            <div id="congratulations">
+                <Confetti 
+                height={1500}
+                // width={1000}
+                numberOfPieces={800}
+                gravity={0.05}
+                tweenDuration={0.001}
+                initialVelocityX={10}
+                />
+                {/* <div id="congratulations-message">
+                    <h2>Well done!</h2>
+                </div> */}
+            </div>
+            : null}
+            
             <h3 id="topic-heading">Quiz</h3>
             <p>Have fun with this little quiz to test your Spanish!</p>
             <form onSubmit={handleSubmit}>
