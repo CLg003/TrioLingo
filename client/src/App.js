@@ -31,21 +31,20 @@ function App() {
         })
     },[]);
 
-    useEffect(() => {
-      ( loggedInUser ? setLessonsCompleted(loggedInUser.lessons_completed) : setLessonsCompleted(0) )
-    }, [loggedInUser])
+    const logIn = (user) =>     {
+        setLoggedInUser(user);
+        setLessonsCompleted(user.lessons_completed);
+    }
 
     const logInUser = (nameInput) => {
-        const userToLogIn = users.filter(user => {
-            return user.name === nameInput;
-        })
-        if (userToLogIn) {
-            setLoggedInUser(userToLogIn);
+        const userToLogIn = users.filter(user => user.name === nameInput)
+        if (userToLogIn.length > 0) {
+            logIn(userToLogIn[0]);
         } else { 
             const newUser = {name : nameInput, lessons_completed: 0};
             addUser(newUser);
-            setLoggedInUser(userToLogIn);
-        }
+            logIn(newUser);
+       }
     }
 
     const addUser = (newUser) => {
