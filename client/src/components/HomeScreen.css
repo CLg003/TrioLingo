@@ -23,6 +23,10 @@
     padding: 20px;
 }
 
+#form-box > hr {
+    border-top: 1px solid #2BCF18;
+}
+
 #form-box > form > label {
 
 }

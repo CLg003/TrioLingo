@@ -65,17 +65,10 @@ const QuizForm = ({
             {quizPassed ? 
                 <Confetti 
                 height={1500}
-                // width={1000}
                 numberOfPieces={800}
                 gravity={0.05}
                 tweenDuration={0.001}
                 initialVelocityX={10}
-                // drawShape={ctx => {
-                //     ctx.beginPath()
-                //     drawImage(confettiImage, 10, 10)
-                //     ctx.stroke()
-                //     ctx.closePath()
-                //     }
                 />
             : null}
 
@@ -85,6 +78,7 @@ const QuizForm = ({
             ariaHideApp={false}
             contentLabel="Next Lesson"
             >
+                <h2> 🎉 ¡FELICIDADES! 🎉 </h2>  <br/> <p> You are doing great. <br/> { lessonsCompleted === 2 ? "Click on the button to play a game!" : "Click on the button when you are ready for your next lesson."}</p>
                 <button onClick={() => lessonProgression()}>{ lessonsCompleted === 2 ? "Play a game!" : "Next Lesson"}</button>
             </ReactModal>
             

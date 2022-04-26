@@ -87,6 +87,10 @@
 
 ul {
     padding:0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
 }
 
 li {
@@ -99,6 +103,7 @@ li {
     margin-left: 15px;
     margin-right: 15px;
     text-align: center;
+    flex-basis: 13%;
 }
 
 

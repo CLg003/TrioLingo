@@ -54,7 +54,7 @@ const LessonStyleThree = ({words}) => {
               <div className="column">
 
                   <div className="animal-p">
-                    <img onClick={()=>play( {id: 'dog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                    <img onClick={()=>play( {id: 'dog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                     <p>The <span onMouseEnter={() => setShowDogContent(true)}
                                   onMouseLeave={() => setShowDogContent(false)}>
                                   {showDogContent ? (words.dog.english) : (words.dog.translation)}
@@ -63,7 +63,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
                 
                   <div className="animal-p">
-                    <img onClick={()=>play( {id: 'cat'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                    <img onClick={()=>play( {id: 'cat'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                     <p>The <span
                               onMouseEnter={() => setShowCatContent(true)}
                               onMouseLeave={() => setShowCatContent(false)}>
@@ -73,7 +73,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
 
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'fish'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'fish'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowFishContent(true)}
                                   onMouseLeave={() => setShowFishContent(false)}>
@@ -83,7 +83,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
                   
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'duck'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'duck'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowDuckContent(true)}
                                   onMouseLeave={() => setShowDuckContent(false)}>
@@ -95,7 +95,7 @@ const LessonStyleThree = ({words}) => {
 
               <div className = "column">
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'penguin'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'penguin'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowPenguinContent(true)}
                                   onMouseLeave={() => setShowPenguinContent(false)}>
@@ -105,7 +105,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
                   
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'dinosaur'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'dinosaur'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowDinoContent(true)}
                                   onMouseLeave={() => setShowDinoContent(false)}>
@@ -115,7 +115,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
                   
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'pig'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'pig'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowPigContent(true)}
                                   onMouseLeave={() => setShowPigContent(false)}>
@@ -125,7 +125,7 @@ const LessonStyleThree = ({words}) => {
                   </div>
                   
                   <div className="animal-p">
-                      <img onClick={()=>play( {id: 'frog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                      <img onClick={()=>play( {id: 'frog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`} height="85px"/>
                       <p>The <span
                                   onMouseEnter={() => setShowFrogContent(true)}
                                   onMouseLeave={() => setShowFrogContent(false)}>

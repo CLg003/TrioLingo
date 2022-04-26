@@ -95,10 +95,11 @@
     font-size: 30px;
     text-shadow: 1px 1px 1px black;
     /* background-color: rgb(219, 206, 242); */
-    background-color: rgb(211, 211, 211);
+    /* background-color: rgb(211, 211, 211); */
+    background-color: #c4add1;
     /* padding: 10px; */
     border-radius: 50%;
-    box-shadow: 0 0 15px 15px lightgray;
+    box-shadow: 0 0 7px 7px #c4add1;
 }
 
 .black {
