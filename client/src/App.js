@@ -64,12 +64,12 @@ function App() {
     return (
         <div className="App">
             <header>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`} width="150px"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`} />
                 <div id="header-title">
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
                 </div>
-                <p>Hola user!</p>
+                <p id="hola-user">Hola user!</p>
             </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
