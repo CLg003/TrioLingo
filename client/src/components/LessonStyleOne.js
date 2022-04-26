@@ -49,7 +49,7 @@ const LessonStyleOne = ({words}) => {
         )
     } else {
         return(
-            <div >
+            <div id="main-container">
             <h2>Lesson 1: Numbers</h2>
             <p>Learn numbers 0 - 10 in spanish!</p>
             <p>Press the 'translate' button to get started.</p>

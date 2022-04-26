@@ -8,7 +8,7 @@ const LessonProgressBar = ({lessonsCompleted}) => {
   
 
     return (
-        <>
+        <div id="progress-bar" >
         <ProgressBar 
             percent={percentage}
             hasStepZero={false}
@@ -48,7 +48,7 @@ const LessonProgressBar = ({lessonsCompleted}) => {
                 )}
             </Step>
         </ProgressBar>
-        </>
+        </div>
     )
 
 }

@@ -16,7 +16,7 @@ function App() {
     const [words, setWords] = useState(null);
     const [users, setUsers] = useState([]);
     const [lessonsCompleted, setLessonsCompleted] = useState(0);
-    const [loggedInUser, setLoggedInUser] = useState(null);
+    const [loggedInUser, setLoggedInUser] = useState("Cordii");
 
     useEffect(()=> {
         getWords()
@@ -63,7 +63,14 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Trash Panda at your service</h1>
+            <header>
+                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`} width="150px"/>
+                <div id="header-title">
+                    <h1>TrioLingo</h1>
+                    <h2 id="subtitle">by TrashPanda</h2>
+                </div>
+                <p>Hola user!</p>
+            </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
             : <>
@@ -75,6 +82,10 @@ function App() {
             <LessonProgressBar lessonsCompleted={lessonsCompleted}/>
             </>
             }
+            <footer>
+                <p>©2022 TrashPanda</p>
+                <p>logos by <a href="https://icons8.com/">Icons8</a> & <a href="https://www.flaticon.com/">FlatIcon</a></p>
+            </footer>
         </div>
     );
 }

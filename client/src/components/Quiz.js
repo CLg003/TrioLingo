@@ -62,14 +62,15 @@ const Quiz = ({wordList}) => {
 
 
     return (
-
-        <QuizForm 
-        questionOneWord={questionOneWord} q1WrongA={q1WrongA} q1WrongB={q1WrongB}
-        questionTwoWord={questionTwoWord} q2WrongA={q2WrongA} q2WrongB={q2WrongB}
-        questionThreeWord={questionThreeWord} q3WrongA={q3WrongA} q3WrongB={q3WrongB}
-        questionFourWord={questionFourWord} q4WrongA={q4WrongA} q4WrongB={q4WrongB}
-        questionFiveWord={questionFiveWord} q5WrongA={q5WrongA} q5WrongB={q5WrongB}
-        />
+        <div id="main-container">
+            <QuizForm 
+            questionOneWord={questionOneWord} q1WrongA={q1WrongA} q1WrongB={q1WrongB}
+            questionTwoWord={questionTwoWord} q2WrongA={q2WrongA} q2WrongB={q2WrongB}
+            questionThreeWord={questionThreeWord} q3WrongA={q3WrongA} q3WrongB={q3WrongB}
+            questionFourWord={questionFourWord} q4WrongA={q4WrongA} q4WrongB={q4WrongB}
+            questionFiveWord={questionFiveWord} q5WrongA={q5WrongA} q5WrongB={q5WrongB}
+            />
+        </div>
         );
 }
 

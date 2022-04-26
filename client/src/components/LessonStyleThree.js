@@ -39,7 +39,8 @@ const animalList = [words.dog, words.cat, words.fish, words.duck, words.penguin,
 if (showLesson) { 
 
     return (
-        <>
+
+        <div id="main-container">
         <h2>Lesson 3: Animals</h2>
         <p>You did really well on the colours, well done! Now let's learn some animal names.</p>
           <h4>Instructions:</h4>
@@ -119,7 +120,7 @@ if (showLesson) {
             <button onClick={showQuiz}>
                 Quiz Yourself!
             </button></div>
-        </>
+        </div>
 
     )
     }

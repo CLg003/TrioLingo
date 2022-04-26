@@ -6,7 +6,7 @@ import DragDrop from './DragDrop';
 const LessonStyleTwo = ({words}) => {
 
     return (
-        <div id="lesson-2">
+        <div id="main-container">
             <h2 id="topic-heading">Lesson 2: Colours</h2>
             {/* DnD FUNCTIONALITY WRAPPER */}
             <DndProvider backend={HTML5Backend}>

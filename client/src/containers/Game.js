@@ -101,12 +101,12 @@ function Game() {
     } , [])
 
     return (
-        <div className="Game">
+        <div id="main-container">
             <h1> Test your Memoria </h1>
             <h3>Your goal is to remember which image matches its word in Spanish. If the cards do not match,
                 they will get flipped after a second. Click on the button to shuffle the cards again and start a new game.</h3>
             <button onClick = {shuffleCards}> New Game </button>
-            <p>Turns: {turns} </p>
+            <p id="turns">Turns: {turns} </p>
             <div className="card-grid">
                 {cards.map(card => (
                     <SingleCard 
