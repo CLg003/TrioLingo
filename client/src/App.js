@@ -15,7 +15,7 @@ function App() {
 
     const [words, setWords] = useState(null);
     const [users, setUsers] = useState([]);
-    const [lessonsCompleted, setLessonsCompleted] = useState(0);
+    const [lessonsCompleted, setLessonsCompleted] = useState(3);
     const [loggedInUser, setLoggedInUser] = useState("Cordii");
 
     useEffect(()=> {

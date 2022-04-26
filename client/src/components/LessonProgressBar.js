@@ -12,7 +12,7 @@ const LessonProgressBar = ({lessonsCompleted}) => {
         <ProgressBar 
             percent={percentage}
             hasStepZero={false}
-            filledBackground="linear-gradient(to right, #992dd9 , #2bcf18)"
+            filledBackground="linear-gradient(to right, #F8F155 , #2bcf18)"
             width={800}
             height={30}
         >

@@ -69,8 +69,8 @@ const DragDrop = ({words}) => {
                             })}
                         </div>
                     </div>
-                    <p id="reset-drag-n-drop" onClick={handleResetClick}>Reset Board</p>
-                    <p id="take-the-quiz">Think you know your Spanish colours? <span onClick={handleQuizClick}>Take the quiz!</span></p>
+                    <button id="reset-drag-n-drop" onClick={handleResetClick}>Reset Board</button>
+                    <p id="take-the-quiz">Do you think you know the colours in Spanish? <button onClick={handleQuizClick}>Take the quiz!</button></p>
                 </div>
             </>
         );

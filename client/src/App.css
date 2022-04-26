@@ -3,11 +3,16 @@
     min-height: 100vh;
 }
 
+#turns {
+    text-decoration: underline;
+}
+
 #main-container {
     background-color: white;
     width: 80%;
     margin: auto;
     border-radius: 15px;
+    min-height: 60vh;
 }
 
 header {
@@ -43,6 +48,7 @@ header > p {
 
 #lesson-header {
     text-align: center;
+    margin: 0 20px;
 }
 
 h2 {
@@ -60,7 +66,7 @@ h2 {
     justify-content: center;
     align-items: baseline;
     padding: 0;
-    margin: 0;
+    margin: 0 10px;;
 }
 
 #instructions > h4 {
@@ -73,23 +79,75 @@ h2 {
     padding: 0;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.animal-p > img {
+    margin: 0 20px;
+}
+
+.animal-p > p {
+    font-size: 20px;
+}
+
 #progress-bar {
     width: 800px;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+button {
+    background: greenyellow;
+    border: 2px solid purple;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background: #F8F155;
+    color: black;
 }
 
 footer {
     text-align: center;
-    background-color: #2BCF18;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    color: #fff;
+    /* background-color: #2BCF18; */
+    /* position: absolute; */
+    /* bottom: -60; */
+    /* width: 100%; */
+    /* padding: 4px; */
 }
 
 footer p{
     margin: 0;
     font-size: 12px;
+}
+
+footer a {
+    color: #fff;
 }
 
 

@@ -8,7 +8,7 @@ import Quiz from './Quiz';
 
 const LessonStyleOne = ({words}) => {
 
-    let [toggleState, toggle] = useToggle();
+    let [toggleState, toggle] = useToggle(); //hook toggleState always starts as true, toggle is function to invert toggleState
     let [showLesson, showQuiz] = useToggle();
 
     const numberWords = [words.zero, words.one, words.two, words.three, words.four, words.five, words.six, words.seven, words.eight, words.nine, words.ten]
@@ -34,7 +34,9 @@ const LessonStyleOne = ({words}) => {
             <li>
                 <div 
                 className={ toggleState? 'number-item' : `${word.english}`}
-                onAnimationStart={()=>play( {id: `${word.english}`})}>                    
+                onAnimationStart={()=>play( {id: `${word.english}`})}
+                onAnimationEnd={word.english === 'ten'? {toggle} : ""}
+                >                    
                     <img className="number-images" src={`${process.env.PUBLIC_URL}${word.img}`} alt={`number ${word.english} icon`}/>
 
                     {!toggleState? <h3>{word.translation}</h3> : <h3>{word.english}</h3> }
