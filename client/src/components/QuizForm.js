@@ -80,6 +80,7 @@ const QuizForm = ({
             : null}
 
             <ReactModal
+            id="passed-quiz-modal"
             isOpen={!toggleState}
             ariaHideApp={false}
             contentLabel="Next Lesson"
@@ -90,119 +91,125 @@ const QuizForm = ({
             <h3 id="topic-heading">Quiz</h3>
             <p>Have fun with this little quiz to test your Spanish!</p>
             <form onSubmit={handleSubmit}>
+                <div id="quiz-questions-container">
+                    <div id="quiz-questions-1">
+                        {/* QUESTION 1 */}
+                        <div className="question-container">
+                            <div className="question-div q1-div">
+                                <img src={`${process.env.PUBLIC_URL}${questionOneWord.img}`} alt="Quiz topic"/>
+                                <div className="question-text">
+                                    <p className="question-number">Question 1</p>
+                                    <p className="question">What is the Spanish word for {questionOneWord.english}?</p>
 
-                {/* QUESTION 1 */}
-                <div className="question-div q1-div">
-                    <img src={`${process.env.PUBLIC_URL}${questionOneWord.img}`} alt="Quiz topic"/>
-                    <div className="question-text">
-                        <p className="question-number">Question 1</p>
-                        <p className="question">What is the Spanish word for {questionOneWord.english}?</p>
+                                    {/* WRONG ANSWER */}
+                                    <label htmlFor="option-1">{q1WrongA.translation}</label>
+                                    <input type="radio" id="option-1" name="question-1" value="wrong" onChange={handleChangeQ1}/>
+                                    
+                                    {/* WRONG ANSWER */}
+                                    <label htmlFor="option-2">{q1WrongB.translation}</label>
+                                    <input type="radio" id="option-2" name="question-1" value="wrong" onChange={handleChangeQ1}/>
+                                    
+                                    {/* CORRECT ANSWER */}
+                                    <label htmlFor="option-3">{questionOneWord.translation}</label>
+                                    <input type="radio" id="option-3" name="question-1" value={questionOneWord.translation} onChange={handleChangeQ1}/>
+                                </div>
+                                {formSubmit? <Answer answer={questionOneAnswer}/> : null }
+                            </div>
+                        </div>
 
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q1WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-1" value="wrong" onChange={handleChangeQ1}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-2">{q1WrongB.translation}</label>
-                        <input type="radio" id="option-2" name="question-1" value="wrong" onChange={handleChangeQ1}/>
-                        
-                        {/* CORRECT ANSWER */}
-                        <label htmlFor="option-3">{questionOneWord.translation}</label>
-                        <input type="radio" id="option-3" name="question-1" value={questionOneWord.translation} onChange={handleChangeQ1}/>
+                        {/* QUESTION 2 */}
+                        <div className="question-div q2-div">
+                            <img src={`${process.env.PUBLIC_URL}${questionTwoWord.img}`} alt="Quiz topic"/>
+                            <div className="question-text">
+                                <p className="question-number">Question 2</p>
+                                <p className="question">What is the Spanish word for {questionTwoWord.english}?</p>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-1">{q2WrongA.translation}</label>
+                                <input type="radio" id="option-1" name="question-2" value="wrong" onChange={handleChangeQ2}/>
+                                
+                                {/* CORRECT ANSWER */}
+                                <label htmlFor="option-2">{questionTwoWord.translation}</label>
+                                <input type="radio" id="option-2" name="question-2" value={questionTwoWord.translation} onChange={handleChangeQ2}/>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-3">{q2WrongB.translation}</label>
+                                <input type="radio" id="option-3" name="question-2" value="wrong" onChange={handleChangeQ2}/>
+                            </div>
+                            {formSubmit? <Answer answer={questionTwoAnswer}/> : null }
+                        </div>
+
+                        {/* QUESTION 3 */}
+                        <div className="question-div q3-div">
+                            <img src={`${process.env.PUBLIC_URL}${questionThreeWord.img}`} alt="Quiz topic"/>
+                            <div className="question-text">
+                                <p className="question-number">Question 3</p>
+                                <p className="question">What is the Spanish word for {questionThreeWord.english}?</p>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-1">{q3WrongA.translation}</label>
+                                <input type="radio" id="option-1" name="question-3" value="wrong" onChange={handleChangeQ3}/>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-2">{q3WrongB.translation}</label>
+                                <input type="radio" id="option-2" name="question-3" value="wrong" onChange={handleChangeQ3}/>
+                                
+                                {/* CORRECT ANSWER */}
+                                <label htmlFor="option-3">{questionThreeWord.translation} </label>
+                                <input type="radio" id="option-3" name="question-3" value={questionThreeWord.translation} onChange={handleChangeQ3}/>
+                            </div>
+                            {formSubmit? <Answer answer={questionThreeAnswer}/> : null }
+                        </div>
                     </div>
-                    {formSubmit? <Answer answer={questionOneAnswer}/> : null }
-                </div>
 
-                {/* QUESTION 2 */}
-                <div className="question-div q2-div">
-                    <img src={`${process.env.PUBLIC_URL}${questionTwoWord.img}`} alt="Quiz topic"/>
-                    <div className="question-text">
-                        <p className="question-number">Question 2</p>
-                        <p className="question">What is the Spanish word for {questionTwoWord.english}?</p>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q2WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-2" value="wrong" onChange={handleChangeQ2}/>
-                        
-                        {/* CORRECT ANSWER */}
-                        <label htmlFor="option-2">{questionTwoWord.translation}</label>
-                        <input type="radio" id="option-2" name="question-2" value={questionTwoWord.translation} onChange={handleChangeQ2}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">{q2WrongB.translation}</label>
-                        <input type="radio" id="option-3" name="question-2" value="wrong" onChange={handleChangeQ2}/>
+                    <div id="quiz-questions-2">
+                        {/* QUESTION 4 */}
+                        <div className="question-div q4-div">
+                            <img src={`${process.env.PUBLIC_URL}${questionFourWord.img}`} alt="Quiz topic"/>
+                            <div className="question-text">
+                                <p className="question-number">Question 4</p>
+                                <p className="question">What is the Spanish word for {questionFourWord.english}?</p>
+                                
+                                {/* CORRECT ANSWER */}
+                                <label htmlFor="option-1">{questionFourWord.translation} </label>
+                                <input type="radio" id="option-1" name="question-4" value={questionFourWord.translation} onChange={handleChangeQ4}/>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-2">{q4WrongA.translation}</label>
+                                <input type="radio" id="option-2" name="question-4" value="wrong" onChange={handleChangeQ4}/>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-3">{q4WrongB.translation}</label>
+                                <input type="radio" id="option-3" name="question-4" value="wrong" onChange={handleChangeQ4}/>
+                            </div>
+                            {formSubmit? <Answer answer={questionFourAnswer}/> : null }
+                        </div>
+
+                        {/* QUESTION 5 */}
+                        <div className="question-div q5-div">
+                            <img src={`${process.env.PUBLIC_URL}${questionFiveWord.img}`} alt="Quiz topic"/>
+                            <div className="question-text">
+                                <p className="question-number">Question 5</p>
+                                <p className="question">What is the Spanish word for {questionFiveWord.english}?</p>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-1">{q5WrongA.translation}</label>
+                                <input type="radio" id="option-1" name="question-5" value="wrong" onChange={handleChangeQ5}/>
+                                
+                                {/* CORRECT ANSWER */}
+                                <label htmlFor="option-2">{questionFiveWord.translation} </label>
+                                <input type="radio" id="option-2" name="question-5" value={questionFiveWord.translation} onChange={handleChangeQ5}/>
+                                
+                                {/* WRONG ANSWER */}
+                                <label htmlFor="option-3">{q5WrongB.translation}</label>
+                                <input type="radio" id="option-3" name="question-5" value="wrong" onChange={handleChangeQ5}/>
+                            </div>
+                            {formSubmit? <Answer answer={questionFiveAnswer}/> : null }
+                        </div>
+                        <input type="submit" ></input>
                     </div>
-                    {formSubmit? <Answer answer={questionTwoAnswer}/> : null }
                 </div>
-
-                {/* QUESTION 3 */}
-                <div className="question-div q3-div">
-                    <img src={`${process.env.PUBLIC_URL}${questionThreeWord.img}`} alt="Quiz topic"/>
-                    <div className="question-text">
-                        <p className="question-number">Question 3</p>
-                        <p className="question">What is the Spanish word for {questionThreeWord.english}?</p>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q3WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-3" value="wrong" onChange={handleChangeQ3}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-2">{q3WrongB.translation}</label>
-                        <input type="radio" id="option-2" name="question-3" value="wrong" onChange={handleChangeQ3}/>
-                        
-                        {/* CORRECT ANSWER */}
-                        <label htmlFor="option-3">{questionThreeWord.translation} </label>
-                        <input type="radio" id="option-3" name="question-3" value={questionThreeWord.translation} onChange={handleChangeQ3}/>
-                    </div>
-                    {formSubmit? <Answer answer={questionThreeAnswer}/> : null }
-                </div>
-
-                {/* QUESTION 4 */}
-                <div className="question-div q4-div">
-                    <img src={`${process.env.PUBLIC_URL}${questionFourWord.img}`} alt="Quiz topic"/>
-                    <div className="question-text">
-                        <p className="question-number">Question 4</p>
-                        <p className="question">What is the Spanish word for {questionFourWord.english}?</p>
-                        
-                        {/* CORRECT ANSWER */}
-                        <label htmlFor="option-1">{questionFourWord.translation} </label>
-                        <input type="radio" id="option-1" name="question-4" value={questionFourWord.translation} onChange={handleChangeQ4}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-2">{q4WrongA.translation}</label>
-                        <input type="radio" id="option-2" name="question-4" value="wrong" onChange={handleChangeQ4}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">{q4WrongB.translation}</label>
-                        <input type="radio" id="option-3" name="question-4" value="wrong" onChange={handleChangeQ4}/>
-                    </div>
-                    {formSubmit? <Answer answer={questionFourAnswer}/> : null }
-                </div>
-
-                {/* QUESTION 5 */}
-                <div className="question-div q5-div">
-                    <img src={`${process.env.PUBLIC_URL}${questionFiveWord.img}`} alt="Quiz topic"/>
-                    <div className="question-text">
-                        <p className="question-number">Question 5</p>
-                        <p className="question">What is the Spanish word for {questionFiveWord.english}?</p>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-1">{q5WrongA.translation}</label>
-                        <input type="radio" id="option-1" name="question-5" value="wrong" onChange={handleChangeQ5}/>
-                        
-                        {/* CORRECT ANSWER */}
-                        <label htmlFor="option-2">{questionFiveWord.translation} </label>
-                        <input type="radio" id="option-2" name="question-5" value={questionFiveWord.translation} onChange={handleChangeQ5}/>
-                        
-                        {/* WRONG ANSWER */}
-                        <label htmlFor="option-3">{q5WrongB.translation}</label>
-                        <input type="radio" id="option-3" name="question-5" value="wrong" onChange={handleChangeQ5}/>
-                    </div>
-                    {formSubmit? <Answer answer={questionFiveAnswer}/> : null }
-                </div>
-                <input type="submit" >
-
-                </input>
+                
 
                     
                 </form>

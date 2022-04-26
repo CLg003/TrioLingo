@@ -1,3 +1,14 @@
+#home-screen > h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#home-screen-header-p {
+    text-align: center;
+    color: #fff;
+}   
+
+
 #form-box {
     width: 30%;
     margin: auto;
@@ -19,4 +30,18 @@
 #form-box > form > input {
     padding: 5px;
     margin: 10px;
+}
+
+input[type=submit] {
+    background: greenyellow;
+    border: 2px solid purple;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

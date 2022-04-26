@@ -22,7 +22,7 @@ const HomeScreen = ({logInUser}) => {
     return (
         <div id="home-screen">
             <h2>Welcome to TrioLingo!</h2>
-            <p>Welcome introductory blurb here, blah blah blah</p>
+            <p id="home-screen-header-p">Welcome introductory blurb here, blah blah blah</p>
             <div id="form-box">
                 <h4>Been here before?</h4>
                 <p>Enter your username to continue where you left off.</p>
