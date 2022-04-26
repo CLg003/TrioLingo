@@ -155,12 +155,12 @@ db.words.insertMany([
 
 db.users.insertMany([
     {name: "Cordii",
-    lessons_completed: "0"},
+    lessons_completed: 0},
     {name: "Claire",
-    lessons_completed: "1"},
+    lessons_completed: 1},
     {name: "Tanya",
-    lessons_completed: "2"},
+    lessons_completed: 2},
     {name: "Eli",
-    lessons_completed: "3"}
+    lessons_completed: 3}
 
 ])

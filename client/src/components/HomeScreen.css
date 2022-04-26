@@ -1,0 +1,21 @@
+#form-box {
+    width: 30%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+#form-box > form {
+    padding: 20px;
+}
+
+#form-box > form > label {
+
+}
+
+#form-box > form > input {
+    padding: 5px;
+    margin: 10px;
+}
