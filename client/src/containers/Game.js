@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Confetti from 'react-confetti';
 import SingleCard from "../components/SingleCard";
 
 
@@ -32,6 +33,7 @@ function Game() {
 // clickable
 
     const [disabled, setDisabled] = useState(false)
+    const [matchedCards , setMatchedCards] = useState(0);
 
 //shuffle cards function
     const shuffleCards = () => {
@@ -70,6 +72,7 @@ function Game() {
                 setCards(prevCards => {
                     return prevCards.map(card => {
                         if (card.name === choiceOne.name) {
+                            setMatchedCards(matchedCards + 1)
                             return {...card, matched :true}
                         }else {
                             return card
@@ -102,6 +105,16 @@ function Game() {
 
     return (
         <div id="main-container">
+              {matchedCards === 6 ? 
+                <Confetti 
+                height={1500}
+                numberOfPieces={800}
+                gravity={0.05}
+                tweenDuration={0.001}
+                initialVelocityX={10}
+                />
+            : null}
+
             <div id= "lesson-header">
             <h2 id="topic-heading"> Test your Memory </h2>
             {/* <p>Look how far you have come!</p> */}
