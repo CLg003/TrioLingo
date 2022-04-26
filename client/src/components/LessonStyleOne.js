@@ -50,22 +50,28 @@ const LessonStyleOne = ({words}) => {
     } else {
         return(
             <div id="main-container">
-            <h2>Lesson 1: Numbers</h2>
-            <p>Learn numbers 0 - 10 in spanish!</p>
-            <p>Press the 'translate' button to get started.</p>
-            <p>Tip: turn on your volumn to hear the words.</p>
-            <ul className='numbers'>
-                {numberNodes} 
-            </ul>
-            <div>
-                <button onClick={toggle}  disabled={!toggleState}>
-                    Translate
-                </button>
-            </div>
-            <div> 
-            <button onClick={showQuiz}>
-                Quiz Yourself!
-            </button></div>
+                <div id="lesson-header"> 
+                    <h2>Lesson 1: Numbers</h2>
+                    <p>Learn numbers 0 - 10 in Spanish!</p>
+                    <div id="instructions">
+                        <h4>Instructions:</h4>
+                        <p>Press the 'translate' button to get started.</p>
+                    </div>
+                    <p>Top Tip: Turn on your volume.</p>
+                </div>
+                <ul className='numbers'>
+                    {numberNodes} 
+                </ul>
+                <div>
+                    <button onClick={toggle}  disabled={!toggleState}>
+                        Translate
+                    </button>
+                </div>
+                <div> 
+                    <button onClick={showQuiz}>
+                        Quiz Yourself!
+                    </button>
+                </div>
             </div>
         )
     }

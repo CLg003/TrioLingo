@@ -45,14 +45,17 @@ const DragDrop = ({words}) => {
         return (
             <>
                 <div className="lesson-content">
-                    <p>You aced that numbers quiz, well done! Now that you've mastered your Spanish "uno, dos, tres", let's see how you get on with some colours... </p>
-                    <div id="instructions">
-                        <h4>Instructions: </h4>
-                        <p>Can you match the paints to the Spanish colours? Click and drag each paint can to the word that you think matches!</p>
-                    </div>
-                    <div className="audio-instructions">
-                        <img className="audio-icon" src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
-                        <p>Click on the paint cans to hear the words!</p>
+                    <div id="lesson-header">
+                        <h2 id="topic-heading">Lesson 2: Colours</h2>
+                        <p>You aced that numbers quiz, well done! Now that you've mastered your Spanish "uno, dos, tres", let's see how you get on with some colours... </p>
+                        <div id="instructions">
+                            <h4>Instructions: </h4>
+                            <p>Can you match the paints to the Spanish colours? Click and drag each paint can to the word that you think matches!</p>
+                        </div>
+                        <div className="audio-instructions">
+                            <img className="audio-icon" src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                            <p>Click on the paint cans to hear the words!</p>
+                        </div>
                     </div>
                     <div id="paints-and-board">
                         <div className="dnd-colours">

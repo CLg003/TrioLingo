@@ -102,9 +102,15 @@ function Game() {
 
     return (
         <div id="main-container">
-            <h1> Test your Memoria </h1>
-            <h3>Your goal is to remember which image matches its word in Spanish. If the cards do not match,
-                they will get flipped after a second. Click on the button to shuffle the cards again and start a new game.</h3>
+            <div id= "lesson-header">
+            <h2 id="topic-heading"> Test your Memoria </h2>
+            <p>Look how far you have come!</p>
+            <div id="instructions">
+                <h4>Instructions: </h4>
+                <p>Your goal is to remember which image matches its word in Spanish. If the cards do not match,
+                they will get flipped after a second. Click on the button to shuffle the cards again and start a new game.</p>
+            </div>
+            </div>
             <button onClick = {shuffleCards}> New Game </button>
             <p id="turns">Turns: {turns} </p>
             <div className="card-grid">

@@ -41,11 +41,13 @@ if (showLesson) {
     return (
 
         <div id="main-container">
+        <div id="lesson-header">
         <h2>Lesson 3: Animals</h2>
-        <p>You did really well on the colours, well done! Now let's learn some animal names.</p>
-          <h4>Instructions:</h4>
-          <p>Hover over the Spanish word to see the English translation. Click on the speaker to hear the word!</p>
-        
+        <p>You did really well on the colours, congratulations! Now let's learn some animal names.</p>
+          <div id="instructions">
+          <h4>Instructions:</h4> <p>Hover over the Spanish word to see the English translation. Click on the speaker to hear the word!</p>
+          </div>
+        </div>
         <p><img onClick={()=>play( {id: 'dog'} )} src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
         The <span onMouseEnter={() => setShowDogContent(true)}
                     onMouseLeave={() => setShowDogContent(false)}>

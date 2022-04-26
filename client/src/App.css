@@ -7,7 +7,7 @@
     background-color: white;
     width: 80%;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 header {
@@ -39,6 +39,38 @@ header > p {
     font-size: 20px;
     color: #fff;
     text-shadow: 1px 1px 1px black;
+}
+
+#lesson-header {
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+#lesson-header > p {
+    margin: 5px;
+}
+
+#instructions {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0;
+    margin: 0;
+}
+
+#instructions > h4 {
+    margin: 0;
+    padding: 0;
+}
+
+#instructions > p {
+    margin: 0;
+    padding: 0;
 }
 
 #progress-bar {

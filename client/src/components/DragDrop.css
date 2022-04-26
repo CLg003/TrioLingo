@@ -7,10 +7,7 @@
 #topic-heading {
 }
 
-#instructions {
-    display: flex;
-    align-items: baseline;
-}
+
 
 #instructions > h4 {
     margin-right: 10px;
