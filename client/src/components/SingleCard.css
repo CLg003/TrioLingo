@@ -10,15 +10,16 @@
 .card img {
     width: 100%;
     display: block;
-    border: 2px solid greenyellow;
+    border: 2px;
     border-radius: 6px;
 }
 
 .card-grid {
     margin-top: 20px;
+    padding: 0 300px 40px 300px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 30px;
 }
 
 .card .front {
@@ -26,6 +27,7 @@
 /* absolute position will sit on top of the card and hide it */
     position: absolute;
     transition: all ease-in 0.2s;
+    
 }
 
 
