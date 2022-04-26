@@ -3,7 +3,6 @@ import Confetti from "react-confetti";
 import ReactModal, { contextType } from "react-modal";
 import { useToggle } from "../hooks";
 import SingleCard from "../components/SingleCard";
-import { isFocusable } from "@testing-library/user-event/dist/utils";
 
 const cardImages = [
   {
@@ -69,7 +68,7 @@ const cardImages = [
 ];
 
 function Game() {
-  const [toggle, setToggle] = useState(false);
+  const [toggleState , toggle] = useToggle();
 
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -124,7 +123,7 @@ function Game() {
               // everytime a card matches, matchedCards increases by 1 until hitting 6 matches
               setMatchedCards(matchedCards + 1);
               if (matchedCards === 5) {
-                setToggle(true);
+                toggle();
               }
               return { ...card, matched: true };
             } else {
@@ -155,9 +154,6 @@ function Game() {
     shuffleCards();
   }, []);
 
-  // if (matchedCards === 1) {
-  //     toggle()
-  // }
 
   return (
     <div id="main-container">
@@ -173,7 +169,7 @@ function Game() {
 
       <ReactModal
         id="passed-quiz-modal"
-        isOpen={toggle}
+        isOpen={!toggleState}
         ariaHideApp={false}
         contentLabel="The End"
       >
