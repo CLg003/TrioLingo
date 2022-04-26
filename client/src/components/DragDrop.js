@@ -14,7 +14,7 @@ const DragDrop = ({words}) => {
     // NEED AN ARRAY OF THE COLOURS FOR DnD
     const colourList = [words.black, words.blue, words.brown, words.green, words.orange, words.purple, words.red, words.white, words.yellow];
 
-    // ADDING ID PROPERTY (WON'T BE NEEDED ONCE DB UP AND RUNNING)
+    // ADDING ID PROPERTY
     colourList[0]['id'] = 0;
     colourList[1]['id'] = 1;
     colourList[2]['id'] = 2;
@@ -50,7 +50,10 @@ const DragDrop = ({words}) => {
                         <h4>Instructions: </h4>
                         <p>Can you match the paints to the Spanish colours? Click and drag each paint can to the word that you think matches!</p>
                     </div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/><span>Click on the paint cans to hear the words!</span>
+                    <div className="audio-instructions">
+                        <img className="audio-icon" src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}/>
+                        <p>Click on the paint cans to hear the words!</p>
+                    </div>
                     <div id="paints-and-board">
                         <div className="dnd-colours">
                             {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
@@ -59,7 +62,7 @@ const DragDrop = ({words}) => {
                         </div>
                         <div className="dnd-board">
                             {colourList.sort(function(a, b){return 0.5 - Math.random()}).map((colour) => {
-                                return <DropZone key={colour.id} type={colour.english} name={colour.english} spanish={colour.translation} colourList={colourList} resetBoard={resetBoard} boardHasItems={boardHasItems} />
+                                return <DropZone key={colour.id} type={colour.english} name={colour.english} img={colour.img} id={colour.id} spanish={colour.translation} colourList={colourList} resetBoard={resetBoard} boardHasItems={boardHasItems} />
                             })}
                         </div>
                     </div>
