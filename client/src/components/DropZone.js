@@ -4,7 +4,7 @@ import { useDrop } from 'react-dnd';
 import Colour from './Colour';
 
 
-const DropZone = ({type, name, spanish, colourList, resetBoard, boardHasItems}) => {
+const DropZone = ({type, name, img, id, spanish, colourList, resetBoard, boardHasItems}) => {
 
     // DESTINATION(S) FOR INDIVIDUAL DRAGGED ITEMS
     const [typeBoard, setTypeBoard] = useState([]);
@@ -37,7 +37,7 @@ const DropZone = ({type, name, spanish, colourList, resetBoard, boardHasItems}) 
         <div ref={drop} className="dropzone">
             { typeBoard.length > 0 ? 
             <div id="dragged-colours">
-                <Colour name={name} />
+                <Colour name={name} img={img} id={id}/>
                 <p id="colour-text-overlay" className={name}>{spanish}</p>
             </div>
             : <p id="zone-to-fill" className={name}>{spanish}</p>

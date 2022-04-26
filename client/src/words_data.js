@@ -145,7 +145,7 @@ export const words_data = {
         ten: {
             english: "ten",
             translation: "diez",
-            img: ""
+            img: "/assets/images/numbers/010-10.png"
         }
     },
 }

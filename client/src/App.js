@@ -12,6 +12,7 @@ import HomeScreen from './components/HomeScreen';
 
 
 function App() {
+
     const [words, setWords] = useState(null);
     const [users, setUsers] = useState([]);
     const [lessonsCompleted, setLessonsCompleted] = useState(0);
