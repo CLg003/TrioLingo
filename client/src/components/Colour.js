@@ -15,8 +15,6 @@ const Colour = ({name, img, id}) => {
         }),
     }));
 
-    const imageSrc = require(`../images/colours/icons8-fill-color-96${name.toUpperCase()}.png`);
-
         // SOUNDS
 
         const [play] = useSound(colourSound, {
@@ -37,7 +35,7 @@ const Colour = ({name, img, id}) => {
             <img
                 className="paint-cans"
                 ref={drag}
-                src={imageSrc}
+                src={`${process.env.PUBLIC_URL}${img}`}
                 alt="Coloured paint can"
                 width="150px"
                 style={{ opacity: isDragging ? "0.5" : "1"}}

@@ -1,0 +1,190 @@
+/* MAIN APP */
+.App {
+    position: relative;
+    min-height: 100vh;
+}
+
+#main-container {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    min-height: 60vh;
+    padding-bottom: 20px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+header > img {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+#hello, #hello-logout {
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+#hello-logout > button:hover {
+    background: #F8F155;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Chalkboard SE';
+    font-size: 70px;
+    margin: 5px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    padding: 0;
+}
+
+#subtitle {
+    text-align: center;
+    margin: 0;
+    color: #2BCF18;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    padding: 0;
+}
+
+#user-logout {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* LESSON CONTAINER */
+#lesson-header {
+    text-align: center;
+    margin: 0 20px;
+}
+
+h2, h3, h4 {
+    font-family: 'Chalkboard';
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+#lesson-header > p {
+    margin: 5px;
+}
+
+#instructions {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0;
+    margin: 0 10px;;
+}
+
+#instructions > h4 {
+    margin: 0;
+    padding: 0;
+}
+
+#instructions > p {
+    margin: 0;
+    padding: 0;
+}
+
+/* FLEX ROWS/COLUMNS */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ADDITIONAL LESSON 3 STYLING */
+.animal-p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.animal-p > img {
+    margin: 0 20px;
+}
+
+.animal-p > img:hover {
+    height: 95px;
+    margin-right: 10px;
+}
+
+.animal-p > p {
+    font-size: 20px;
+}
+
+/* ADDITIONAL GAME STYLING */
+#turns {
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* PROGRESS BAR */
+#progress-bar {
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+/* BUTTONS */
+button {
+    background: greenyellow;
+    border: 2px solid purple;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background: #F8F155;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+footer p{
+    margin: 0;
+    font-size: 12px;
+}
+
+footer a {
+    color: #fff;
+}
+
+
+

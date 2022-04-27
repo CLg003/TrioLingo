@@ -11,7 +11,6 @@ const Quiz = ({wordList}) => {
     // RANDOM QUESTION VARIABLES GENERATED WITH RANDOMLY GENERATED WRONG ANSWERS FOR MULTIPLE CHOICE
     // QUESTION 1
     const questionOneWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
-    // console.log(questionOneWord);
     copyWordList.splice((copyWordList.indexOf(questionOneWord)), 1);
     const questionOneWrongAnswersList = [...wordList];
     questionOneWrongAnswersList.splice((questionOneWrongAnswersList.indexOf(questionOneWord)), 1);
@@ -21,7 +20,6 @@ const Quiz = ({wordList}) => {
     
     // QUESTION 2
     const questionTwoWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
-    // console.log(questionTwoWord);
     copyWordList.splice((copyWordList.indexOf(questionTwoWord)), 1);
     const questionTwoWrongAnswersList = [...wordList];
     questionTwoWrongAnswersList.splice((questionTwoWrongAnswersList.indexOf(questionTwoWord)), 1);
@@ -31,7 +29,6 @@ const Quiz = ({wordList}) => {
 
     // QUESTION 3
     const questionThreeWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
-    // console.log(questionThreeWord);
     copyWordList.splice((copyWordList.indexOf(questionThreeWord)), 1);
     const questionThreeWrongAnswersList = [...wordList];
     questionThreeWrongAnswersList.splice((questionThreeWrongAnswersList.indexOf(questionThreeWord)), 1);
@@ -41,7 +38,6 @@ const Quiz = ({wordList}) => {
 
     // QUESTION 4
     const questionFourWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
-    // console.log(questionFourWord);
     copyWordList.splice((copyWordList.indexOf(questionFourWord)), 1);
     const questionFourWrongAnswersList = [...wordList];
     questionFourWrongAnswersList.splice((questionFourWrongAnswersList.indexOf(questionFourWord)), 1);
@@ -51,7 +47,6 @@ const Quiz = ({wordList}) => {
 
     // QUESTION 5
     const questionFiveWord = copyWordList[Math.floor(Math.random()*copyWordList.length)];
-    // console.log(questionFiveWord);
     copyWordList.splice((copyWordList.indexOf(questionFiveWord)), 1);
     const questionFiveWrongAnswersList = [...wordList];
     questionFiveWrongAnswersList.splice((questionFiveWrongAnswersList.indexOf(questionFiveWord)), 1);
@@ -62,14 +57,15 @@ const Quiz = ({wordList}) => {
 
 
     return (
-
-        <QuizForm 
-        questionOneWord={questionOneWord} q1WrongA={q1WrongA} q1WrongB={q1WrongB}
-        questionTwoWord={questionTwoWord} q2WrongA={q2WrongA} q2WrongB={q2WrongB}
-        questionThreeWord={questionThreeWord} q3WrongA={q3WrongA} q3WrongB={q3WrongB}
-        questionFourWord={questionFourWord} q4WrongA={q4WrongA} q4WrongB={q4WrongB}
-        questionFiveWord={questionFiveWord} q5WrongA={q5WrongA} q5WrongB={q5WrongB}
-        />
+        <div id="main-container">
+            <QuizForm 
+            questionOneWord={questionOneWord} q1WrongA={q1WrongA} q1WrongB={q1WrongB}
+            questionTwoWord={questionTwoWord} q2WrongA={q2WrongA} q2WrongB={q2WrongB}
+            questionThreeWord={questionThreeWord} q3WrongA={q3WrongA} q3WrongB={q3WrongB}
+            questionFourWord={questionFourWord} q4WrongA={q4WrongA} q4WrongB={q4WrongB}
+            questionFiveWord={questionFiveWord} q5WrongA={q5WrongA} q5WrongB={q5WrongB}
+            />
+        </div>
         );
 }
 

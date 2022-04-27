@@ -4,19 +4,23 @@ import LessonStyleTwo from './LessonStyleTwo';
 import LessonStyleThree from './LessonStyleThree';
 
 
-const LessonList = ({ words, lessonsCompleted }) => {
+const LessonList = ({ words, lessonsCompleted, loggedInUser }) => {
+
+        if(!words || !loggedInUser) {
+            return;
+        }
 
             if (lessonsCompleted === 0){
                 return(
-                    <LessonStyleOne words={words.numbers}/>
+                    <LessonStyleOne words={words[2].numbers}/>
                 )
                 } else if (lessonsCompleted === 1) {
                 return (
-                    <LessonStyleTwo words={words.colours}/>
+                    <LessonStyleTwo words={words[1].colours}/>
                 )
                 } else {
                 return(
-                    <LessonStyleThree words={words.animals}/>
+                    <LessonStyleThree words={words[0].animals}/>
                 )
                 }
             }
