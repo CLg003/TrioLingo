@@ -55,6 +55,12 @@ header > p {
     text-shadow: 1px 1px 1px black;
 }
 
+#user-logout {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
 #lesson-header {
     text-align: center;
     margin: 0 20px;

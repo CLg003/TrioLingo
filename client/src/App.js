@@ -37,6 +37,10 @@ function App() {
         setLessonsCompleted(user.lessons_completed);
     }
 
+    const logOut = () =>     {
+        setLoggedInUser(null);
+    }
+    
     const logInUser = (nameInput) => {
         const userToLogIn = users.filter(user => user.name === nameInput)
         if (userToLogIn.length > 0) {
@@ -71,11 +75,16 @@ function App() {
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
                 </div>
-                {loggedInUser ? <p>Hola {loggedInUser.name}! </p> : <p>Hola!</p>}
-                {/* <div> 
+                {loggedInUser ? 
+                <div id="user-logout">
+                    <p>Hola {loggedInUser.name}! </p>
                     <button onClick={logOut}>
                         Logout
                     </button>
+                </div>
+                : <p>Hola!</p>}
+                {/* <div> 
+                    
                 </div> */}
             </header>
             {!loggedInUser ?
