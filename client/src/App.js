@@ -17,6 +17,7 @@ function App() {
     const [lessonsCompleted, setLessonsCompleted] = useState(0);
     const [loggedInUser, setLoggedInUser] = useState(null);
 
+
     useEffect(()=> {
         getWords()
         .then((data) => {
