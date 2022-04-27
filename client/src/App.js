@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react';
 import LessonList from './components/LessonList';
 import Game from './containers/Game';
 import LessonProgressBar from './components/LessonProgressBar';
-import {words_data} from './words_data.js';
 import LessonProgressionContext from './context/LessonProgressionContext';
 import {getWords} from './services/WordsService';
 import {getUsers, postUser, putUser} from './services/UsersService';
@@ -15,8 +14,9 @@ function App() {
 
     const [words, setWords] = useState(null);
     const [users, setUsers] = useState([]);
-    const [lessonsCompleted, setLessonsCompleted] = useState(3);
-    const [loggedInUser, setLoggedInUser] = useState(null);
+    const [lessonsCompleted, setLessonsCompleted] = useState();
+    const [loggedInUser, setLoggedInUser] = useState();
+
 
     useEffect(()=> {
         getWords()
@@ -77,11 +77,12 @@ function App() {
     return (
         <div className="App">
             <header>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`} width="150px"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkgRESIZE.png`} />
                 <div id="header-title">
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
                 </div>
+
                 {loggedInUser ? 
                 <div id="user-logout">
                     <p>Hola {loggedInUser.name}! </p>
@@ -90,6 +91,9 @@ function App() {
                     </button>
                 </div>
                 : <p>Hola!</p>}
+
+               
+
             </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
@@ -104,7 +108,7 @@ function App() {
             }
             <footer>
                 <p>©2022 TrashPanda</p>
-                <p>logos by <a href="https://icons8.com/">Icons8</a> & <a href="https://www.flaticon.com/">FlatIcon</a></p>
+                <p>Icons by <a href="https://icons8.com/">Icons8</a> & <a href="https://www.flaticon.com/">FlatIcon</a></p>
             </footer>
         </div>
     );

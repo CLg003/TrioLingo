@@ -29,13 +29,13 @@ const LessonStyleOne = ({words}) => {
         }
     });
 
-    const numberNodes = numberWords.map( (word) => {
+    const numberNodes = numberWords.map( (word, index) => {
         return (
-            <li>
+            <li key={index}>
                 <div 
                 className={ toggleState? 'number-item' : `${word.english}`}
                 onAnimationStart={()=>play( {id: `${word.english}`})}
-                onAnimationEnd={word.english === 'ten'? {toggle} : ""}
+                // onAnimationEnd={word === 'ten'? {toggle} : null}
                 >                    
                     <img className="number-images" src={`${process.env.PUBLIC_URL}${word.img}`} alt={`number ${word.english} icon`}/>
 
@@ -45,13 +45,22 @@ const LessonStyleOne = ({words}) => {
         )
     })
 
+    // function reset() {
+    //     setTimeout(toggle, 30000)
+    // }
+
+    // const handleClick = () => {
+    //     toggle();
+    //     reset();
+    // }
+
     if (!showLesson ) {
         return (
         <Quiz wordList={numberWords} />
         )
     } else {
         return(
-            <div id="main-container">
+            <div id="main-container" className="lesson-one-container">
                 <div id="lesson-header"> 
                     <h2>Lesson 1: Numbers</h2>
                     <p>Learn numbers 0 - 10 in Spanish!</p>
@@ -59,7 +68,10 @@ const LessonStyleOne = ({words}) => {
                         <h4>Instructions:</h4>
                         <p>Press the 'translate' button to get started.</p>
                     </div>
-                    <p>Top Tip: Turn on your volume.</p>
+                    <div id="top-tip">
+                        <h4>Top Tip: </h4>
+                        <p>Turn on your volume.</p>
+                    </div>
                 </div>
                 <ul className='numbers'>
                     {numberNodes} 
@@ -67,6 +79,9 @@ const LessonStyleOne = ({words}) => {
                 <div>
                     <button onClick={toggle}  disabled={!toggleState}>
                         Translate
+                    </button>
+                    <button onClick={toggle} >
+                        Reset
                     </button>
                 </div>
                 <div> 
