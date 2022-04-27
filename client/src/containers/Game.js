@@ -123,7 +123,9 @@ function Game() {
               // everytime a card matches, matchedCards increases by 1 until hitting 6 matches
               setMatchedCards(matchedCards + 1);
               if (matchedCards === 5) {
-                toggle();
+                const delay = setTimeout(() => {
+                  toggle()
+                }, 3000)
               }
               return { ...card, matched: true };
             } else {
