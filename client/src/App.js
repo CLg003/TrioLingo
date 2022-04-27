@@ -6,7 +6,7 @@ import Game from './containers/Game';
 import LessonProgressBar from './components/LessonProgressBar';
 import LessonProgressionContext from './context/LessonProgressionContext';
 import {getWords} from './services/WordsService';
-import {getUsers, postUser} from './services/UsersService';
+import {getUsers, postUser, putUser} from './services/UsersService';
 import HomeScreen from './components/HomeScreen';
 
 
@@ -37,6 +37,10 @@ function App() {
         setLessonsCompleted(user.lessons_completed);
     }
 
+    const logOut = () =>     {
+        setLoggedInUser(null);
+    }
+    
     const logInUser = (nameInput) => {
         const userToLogIn = users.filter(user => user.name === nameInput)
         if (userToLogIn.length > 0) {
@@ -56,7 +60,16 @@ function App() {
     };
 
     const lessonProgression = () => {
-        setLessonsCompleted(lessonsCompleted + 1);
+        const newLessonsCompleted = lessonsCompleted + 1;
+        const userToUpdateId = loggedInUser._id;
+        const amendedUserData = {
+            name: loggedInUser.name,
+            lessons_completed: newLessonsCompleted
+        };
+        console.log(amendedUserData);
+        console.log(userToUpdateId);
+        putUser(userToUpdateId, amendedUserData);
+        setLessonsCompleted(newLessonsCompleted);
     }
 
 
@@ -69,7 +82,18 @@ function App() {
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
                 </div>
-                <p id="hola-user">Hola user!</p>
+
+                {loggedInUser ? 
+                <div id="user-logout">
+                    <p>Hola {loggedInUser.name}! </p>
+                    <button onClick={logOut}>
+                        Logout
+                    </button>
+                </div>
+                : <p>Hola!</p>}
+
+               
+
             </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
