@@ -64,7 +64,7 @@ function App() {
     return (
         <div className="App">
             <header>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkg.png`} />
+                <img src={`${process.env.PUBLIC_URL}/assets/images/TrashPanda_noBkgRESIZE.png`} />
                 <div id="header-title">
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
