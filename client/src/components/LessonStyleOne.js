@@ -60,7 +60,7 @@ const LessonStyleOne = ({words}) => {
         )
     } else {
         return(
-            <div id="main-container">
+            <div id="main-container" className="lesson-one-container">
                 <div id="lesson-header"> 
                     <h2>Lesson 1: Numbers</h2>
                     <p>Learn numbers 0 - 10 in Spanish!</p>
@@ -68,7 +68,10 @@ const LessonStyleOne = ({words}) => {
                         <h4>Instructions:</h4>
                         <p>Press the 'translate' button to get started.</p>
                     </div>
-                    <p>Top Tip: Turn on your volume.</p>
+                    <div id="top-tip">
+                        <h4>Top Tip: </h4>
+                        <p>Turn on your volume.</p>
+                    </div>
                 </div>
                 <ul className='numbers'>
                     {numberNodes} 
