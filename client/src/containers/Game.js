@@ -67,7 +67,7 @@ const cardImages = [
   }
 ];
 
-function Game() {
+function Game({logOut}) {
   const [toggleState , toggle] = useToggle();
 
   const [cards, setCards] = useState([]);
@@ -177,7 +177,7 @@ function Game() {
           {" "}
           You did amazing! <br/> Mapache hopes to see in the next season ... coming soon!{" "}
         </p>
-        <button>The End</button>
+        <button onClick={logOut}>The End</button>
       </ReactModal>
 
       <div id="lesson-header">

@@ -97,7 +97,7 @@ function App() {
             <LessonProgressionContext.Provider value={{lessonProgression, lessonsCompleted}}>
                 {lessonsCompleted < 3 ?
                 <LessonList words={words} lessonsCompleted={lessonsCompleted} loggedInUser={loggedInUser}/>
-                : <Game words={words}/> } 
+                : <Game words={words} logOut={logOut}/> } 
             </LessonProgressionContext.Provider>
             <LessonProgressBar lessonsCompleted={lessonsCompleted}/>
             </>
