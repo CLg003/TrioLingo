@@ -7,7 +7,7 @@ import LessonProgressBar from './components/LessonProgressBar';
 import {words_data} from './words_data.js';
 import LessonProgressionContext from './context/LessonProgressionContext';
 import {getWords} from './services/WordsService';
-import {getUsers, postUser} from './services/UsersService';
+import {getUsers, postUser, putUser} from './services/UsersService';
 import HomeScreen from './components/HomeScreen';
 
 
@@ -57,6 +57,8 @@ function App() {
 
     const lessonProgression = () => {
         setLessonsCompleted(lessonsCompleted + 1);
+        // const amendedUser = {name: nameInput, lessons_completed: lessonsCompleted};
+        // putUser(amendedUser)
     }
 
 
@@ -69,7 +71,12 @@ function App() {
                     <h1>TrioLingo</h1>
                     <h2 id="subtitle">by TrashPanda</h2>
                 </div>
-                <p>Hola user!</p>
+                {loggedInUser ? <p>Hola {loggedInUser.name}! </p> : <p>Hola!</p>}
+                {/* <div> 
+                    <button onClick={logOut}>
+                        Logout
+                    </button>
+                </div> */}
             </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
