@@ -45,15 +45,6 @@ const LessonStyleOne = ({words}) => {
         )
     })
 
-    // function reset() {
-    //     setTimeout(toggle, 30000)
-    // }
-
-    // const handleClick = () => {
-    //     toggle();
-    //     reset();
-    // }
-
     if (!showLesson ) {
         return (
         <Quiz wordList={numberWords} />

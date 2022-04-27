@@ -48,8 +48,6 @@ function App() {
         } else { 
             const newUser = {name : nameInput, lessons_completed: 0};
             addUser(newUser);
-            // logIn(newUser);
-
         }
     }
 
@@ -68,8 +66,6 @@ function App() {
             name: loggedInUser.name,
             lessons_completed: newLessonsCompleted
         };
-        console.log(amendedUserData);
-        console.log(userToUpdateId);
         putUser(userToUpdateId, amendedUserData);
         setLessonsCompleted(newLessonsCompleted);
     }
@@ -93,8 +89,6 @@ function App() {
                     </button>
                 </div>
                 : <p id="hello">Hola!</p>}
-
-               
 
             </header>
             {!loggedInUser ?

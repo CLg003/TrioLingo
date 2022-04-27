@@ -1,11 +1,7 @@
+/* MAIN APP */
 .App {
     position: relative;
     min-height: 100vh;
-}
-
-#turns {
-    text-decoration: underline;
-    text-align: center;
 }
 
 #main-container {
@@ -17,13 +13,13 @@
     padding-bottom: 20px;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
     margin: auto;
-    /* padding-right: 60px; */
 }
 
 header > img {
@@ -69,6 +65,7 @@ h1 {
     text-shadow: 1px 1px 1px black;
 }
 
+/* LESSON CONTAINER */
 #lesson-header {
     text-align: center;
     margin: 0 20px;
@@ -106,6 +103,7 @@ h2 {
     padding: 0;
 }
 
+/* FLEX ROWS/COLUMNS */
 .row {
     display: flex;
     flex-direction: row;
@@ -117,6 +115,7 @@ h2 {
     flex-direction: column;
 }
 
+/* ADDITIONAL LESSON 3 STYLING */
 .animal-p {
     display: flex;
     justify-content: flex-start;
@@ -136,6 +135,13 @@ h2 {
     font-size: 20px;
 }
 
+/* ADDITIONAL GAME STYLING */
+#turns {
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* PROGRESS BAR */
 #progress-bar {
     width: 800px;
     margin: auto;
@@ -143,6 +149,7 @@ h2 {
     margin-bottom: 60px;
 }
 
+/* BUTTONS */
 button {
     background: greenyellow;
     border: 2px solid purple;
@@ -163,15 +170,11 @@ button:hover {
     color: black;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     color: #fff;
     padding-top: 20px;
-    /* background-color: #2BCF18; */
-    /* position: absolute; */
-    /* bottom: -60; */
-    /* width: 100%; */
-    /* padding: 4px; */
 }
 
 footer p{

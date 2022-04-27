@@ -8,7 +8,6 @@ const HomeScreen = ({logInUser}) => {
 
     const handleNameInput = (event) => {
         setNameInput(event.target.value);
-        // console.log('Name is: ' + nameInput);
     }
 
     const handleSubmit = (event) => {

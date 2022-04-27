@@ -18,11 +18,6 @@
     flex-wrap: wrap;
 }
 
-.number-item {
-
-    
-}
-
 .zero {
     animation-name: grow;
     animation-duration: 3s;
@@ -101,7 +96,6 @@ ul {
 
 li {
     list-style: none;
-    /* border: solid; */
     width: 100px;
     height: 100px;
     margin-bottom: 40px;

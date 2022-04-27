@@ -15,11 +15,6 @@ const Colour = ({name, img, id}) => {
         }),
     }));
 
-    // const imageSrc = require(`{}`);
-    // const imageSrc = require(`../images/colours/icons8-fill-color-96${name.toUpperCase()}.png`);
-    // src={`${process.env.PUBLIC_URL}/assets/images/icons8-audio-96.png`}
-    // src={`${process.env.PUBLIC_URL}${img}`}
-
         // SOUNDS
 
         const [play] = useSound(colourSound, {

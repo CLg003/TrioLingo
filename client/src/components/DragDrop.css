@@ -18,15 +18,7 @@
     margin: 5px;
 }
 
-/* #paints-and-board {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap row;
-    align-items: center;
-} */
-
 .dnd-colours {
-    /* width: 40%; */
     max-height: 550px;
     margin: auto;
     display: flex;
@@ -37,7 +29,6 @@
 }
 
 .paint-cans {
-    /* flex-basis: 25%; */
     flex-basis: 15%;
     padding: 10px 0;  
     max-width: 100px;  
@@ -45,9 +36,7 @@
 }
 
 .dnd-board {
-    /* width: 45%; */
     max-height: 550px;
-    /* border: 2px solid black; */
     border-radius: 40px;
     margin: auto;
     display: flex;
@@ -60,13 +49,9 @@
 .dropzone {
     height: 100%;
     width: 100%;
-    /* max-width: 150px; */
-    /* flex-basis: 25%; */
     flex-basis: 10%;
     justify-content: space-evenly;
     text-align: center;
-    /* border: 1px dashed purple; */
-    /* border-radius: 30px;; */
 }
 
 #zone-to-fill {
@@ -94,10 +79,7 @@
     bottom: 20%;
     font-size: 30px;
     text-shadow: 1px 1px 1px black;
-    /* background-color: rgb(219, 206, 242); */
-    /* background-color: rgb(211, 211, 211); */
     background-color: #c4add1;
-    /* padding: 10px; */
     border-radius: 50%;
     box-shadow: 0 0 7px 7px #c4add1;
 }

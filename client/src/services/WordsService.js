@@ -6,4 +6,3 @@ export const getWords = () => {
     }
     
 
-// export default WordsService;

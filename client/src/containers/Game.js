@@ -100,11 +100,9 @@ function Game() {
     setTurns(0);
   };
 
-  // console.log(cards, turns)
 
   //handle a choice
   const handleChoice = (card) => {
-    // console.log(card)
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
@@ -135,7 +133,6 @@ function Game() {
         });
         resetTurn();
       } else {
-        // console.log("Those card do not match")
         //this settimeout will delay the card by 1000miliseconds(a second) to turn if do not macth
         setTimeout(() => resetTurn(), 1000);
       }
@@ -185,7 +182,6 @@ function Game() {
 
       <div id="lesson-header">
         <h2 id="topic-heading"> Test your Memory </h2>
-        {/* <p>Look how far you have come!</p> */}
         <div id="instructions">
           <h4>Instructions: </h4>
           <br />
