@@ -4,9 +4,9 @@ import LessonStyleTwo from './LessonStyleTwo';
 import LessonStyleThree from './LessonStyleThree';
 
 
-const LessonList = ({ words, lessonsCompleted }) => {
+const LessonList = ({ words, lessonsCompleted, loggedInUser }) => {
 
-        if(!words) {
+        if(!words || !loggedInUser) {
             return;
         }
 

@@ -44,7 +44,8 @@ function App() {
         } else { 
             const newUser = {name : nameInput, lessons_completed: 0};
             addUser(newUser);
-            logIn(newUser);
+            // logIn(newUser);
+
         }
     }
 
@@ -52,6 +53,7 @@ function App() {
         postUser(newUser)
         .then((newUser) => {
         setUsers([...users, newUser])
+        logIn(newUser)
         });
     };
 
@@ -76,7 +78,7 @@ function App() {
             : <>
             <LessonProgressionContext.Provider value={{lessonProgression, lessonsCompleted}}>
                 {lessonsCompleted < 3 ?
-                <LessonList words={words} lessonsCompleted={lessonsCompleted}/>
+                <LessonList words={words} lessonsCompleted={lessonsCompleted} loggedInUser={loggedInUser}/>
                 : <Game words={words}/> } 
             </LessonProgressionContext.Provider>
             <LessonProgressBar lessonsCompleted={lessonsCompleted}/>
