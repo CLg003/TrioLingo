@@ -64,7 +64,7 @@ const cardImages = [
     src: "/assets/images/numbers/008-8p.png",
     matched: false,
     name: "ocho",
-  },
+  }
 ];
 
 function Game() {
@@ -176,7 +176,7 @@ function Game() {
         <h2> 🎉 ¡EXCELENTE TRABAJO! 🎉 </h2> <br />{" "}
         <p>
           {" "}
-          You did amazing! in 10 years you will smash Spanish! <br />{" "}
+          You did amazing! <br/> Mapache hopes to see in the next season ... coming soon!{" "}
         </p>
         <button>The End</button>
       </ReactModal>
