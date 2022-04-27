@@ -49,20 +49,27 @@ function App() {
             const newUser = {name : nameInput, lessons_completed: 0};
             addUser(newUser);
             logIn(newUser);
-       }
+        }
     }
 
     const addUser = (newUser) => {
-      postUser(newUser)
-      .then((newUser) => {
+        postUser(newUser)
+        .then((newUser) => {
         setUsers([...users, newUser])
-      });
-  };
+        });
+    };
 
     const lessonProgression = () => {
-        setLessonsCompleted(lessonsCompleted + 1);
-        // const amendedUser = {name: nameInput, lessons_completed: lessonsCompleted};
-        // putUser(amendedUser)
+        const newLessonsCompleted = lessonsCompleted + 1;
+        const userToUpdateId = loggedInUser._id;
+        const amendedUserData = {
+            name: loggedInUser.name,
+            lessons_completed: newLessonsCompleted
+        };
+        console.log(amendedUserData);
+        console.log(userToUpdateId);
+        putUser(userToUpdateId, amendedUserData);
+        setLessonsCompleted(newLessonsCompleted);
     }
 
 
@@ -83,9 +90,6 @@ function App() {
                     </button>
                 </div>
                 : <p>Hola!</p>}
-                {/* <div> 
-                    
-                </div> */}
             </header>
             {!loggedInUser ?
             <HomeScreen logInUser={logInUser}/>
