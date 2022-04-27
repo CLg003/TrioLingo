@@ -7,6 +7,12 @@
     100% {font-size: 1.17em;}
 }
 
+#top-tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .numbers {
     display: flex;
     flex-wrap: wrap;
@@ -111,3 +117,10 @@ li {
     height: 50px;
 }
 
+.lesson-one-container {
+    padding-bottom: 20px;
+}
+
+button:disabled {
+    background-color:  #626e61;
+}
