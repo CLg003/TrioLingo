@@ -86,13 +86,13 @@ function App() {
                 </div>
 
                 {loggedInUser ? 
-                <div id="user-logout">
+                <div id="hello-logout">
                     <p>Hola {loggedInUser.name}! </p>
                     <button onClick={logOut}>
                         Logout
                     </button>
                 </div>
-                : <p>Hola!</p>}
+                : <p id="hello">Hola!</p>}
 
                
 

@@ -32,8 +32,16 @@ header > img {
     padding: 0;
 }
 
-#hola-user {
+#hello, #hello-logout {
     width: 250px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+#hello-logout > button:hover {
+    background: #F8F155;
 }
 
 h1 {
@@ -53,12 +61,6 @@ h1 {
     font-size: 20px;
     text-shadow: 1px 1px 3px black;
     padding: 0;
-}
-
-header > p {
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 1px 1px 1px black;
 }
 
 #user-logout {
