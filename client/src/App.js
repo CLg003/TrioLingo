@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react';
 import LessonList from './components/LessonList';
 import Game from './containers/Game';
 import LessonProgressBar from './components/LessonProgressBar';
-import {words_data} from './words_data.js';
 import LessonProgressionContext from './context/LessonProgressionContext';
 import {getWords} from './services/WordsService';
 import {getUsers, postUser} from './services/UsersService';
@@ -15,7 +14,7 @@ function App() {
 
     const [words, setWords] = useState(null);
     const [users, setUsers] = useState([]);
-    const [lessonsCompleted, setLessonsCompleted] = useState(3);
+    const [lessonsCompleted, setLessonsCompleted] = useState(0);
     const [loggedInUser, setLoggedInUser] = useState(null);
 
     useEffect(()=> {
@@ -45,15 +44,15 @@ function App() {
             const newUser = {name : nameInput, lessons_completed: 0};
             addUser(newUser);
             logIn(newUser);
-       }
+        }
     }
 
     const addUser = (newUser) => {
-      postUser(newUser)
-      .then((newUser) => {
+        postUser(newUser)
+        .then((newUser) => {
         setUsers([...users, newUser])
-      });
-  };
+        });
+    };
 
     const lessonProgression = () => {
         setLessonsCompleted(lessonsCompleted + 1);
@@ -84,7 +83,7 @@ function App() {
             }
             <footer>
                 <p>©2022 TrashPanda</p>
-                <p>logos by <a href="https://icons8.com/">Icons8</a> & <a href="https://www.flaticon.com/">FlatIcon</a></p>
+                <p>Icons by <a href="https://icons8.com/">Icons8</a> & <a href="https://www.flaticon.com/">FlatIcon</a></p>
             </footer>
         </div>
     );

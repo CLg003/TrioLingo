@@ -111,3 +111,6 @@ li {
     height: 50px;
 }
 
+button:disabled {
+    background-color:  #626e61;
+}

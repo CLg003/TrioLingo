@@ -29,13 +29,13 @@ const LessonStyleOne = ({words}) => {
         }
     });
 
-    const numberNodes = numberWords.map( (word) => {
+    const numberNodes = numberWords.map( (word, index) => {
         return (
-            <li>
+            <li key={index}>
                 <div 
                 className={ toggleState? 'number-item' : `${word.english}`}
                 onAnimationStart={()=>play( {id: `${word.english}`})}
-                onAnimationEnd={word.english === 'ten'? {toggle} : ""}
+                // onAnimationEnd={word === 'ten'? {toggle} : null}
                 >                    
                     <img className="number-images" src={`${process.env.PUBLIC_URL}${word.img}`} alt={`number ${word.english} icon`}/>
 
@@ -44,6 +44,15 @@ const LessonStyleOne = ({words}) => {
             </li>
         )
     })
+
+    // function reset() {
+    //     setTimeout(toggle, 30000)
+    // }
+
+    // const handleClick = () => {
+    //     toggle();
+    //     reset();
+    // }
 
     if (!showLesson ) {
         return (
@@ -67,6 +76,9 @@ const LessonStyleOne = ({words}) => {
                 <div>
                     <button onClick={toggle}  disabled={!toggleState}>
                         Translate
+                    </button>
+                    <button onClick={toggle} >
+                        Reset
                     </button>
                 </div>
                 <div> 
