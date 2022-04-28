@@ -6,7 +6,7 @@
 
 #main-container {
     background-color: white;
-    width: 80%;
+    width: 85%;
     margin: auto;
     border-radius: 15px;
     min-height: 60vh;
@@ -185,6 +185,3 @@ footer p{
 footer a {
     color: #fff;
 }
-
-
-

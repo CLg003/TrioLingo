@@ -175,7 +175,7 @@ function Game({logOut}) {
         <h2> 🎉 ¡EXCELENTE TRABAJO! 🎉 </h2> <br />{" "}
         <p>
           {" "}
-          You did amazing! <br/> Mapache hopes to see in the next season ... coming soon!{" "}
+          You did amazing! <br/> Mapache hopes to see you in the next season... coming soon!{" "}
         </p>
         <button onClick={logOut}>The End</button>
       </ReactModal>
