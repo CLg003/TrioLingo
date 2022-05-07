@@ -22,6 +22,27 @@ An Educational language game prototype to teach children spanish - TrioLingo
 - Users log in or sign up (retrieving their progress or starting from scratch) / guest user
 - Storing users in database
 
-### Advanced Extension:
-- Bootstrap 
+## To Run App
 
+Requires MongoDB (https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+
+- Clone respository
+> npm install
+
+- run Mongod 
+
+- From inside server folder
+- Seed the database:
+> npm run seeds
+
+- Run server
+> npm run server:dev
+
+- From inside client folder
+> npm run
+
+## App Running
+
+- Log in and first lesson + quiz
+
+![screen-gif](./Triolingo.gif)
